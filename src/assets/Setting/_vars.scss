@@ -1,0 +1,16 @@
+:root {
+  //폰트
+  --main-font: 'DoHyeon';
+
+  //색상
+  --mainDarkblue-color: #112c68;
+  --mainLightblue-color: #0091cf;
+  --subDarkgreen-color: #373c35;
+  --subGold-color: #95815e;
+  --subSilver-color: #91a4a3;
+  --subLightgray-color: #bdbdb7;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  font-family: var(--main-font);
+}
