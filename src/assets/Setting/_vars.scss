@@ -13,4 +13,8 @@
   --black-color: #000000;
 
   font-family: var(--main-font);
+
+  html {
+    scroll-behavior: smooth;
+  }
 }

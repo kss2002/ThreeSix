@@ -1,0 +1,11 @@
+#Homeheader {
+  @include position-fixed;
+  z-index: 100;
+}
+
+.Homeheader__nav {
+  @include flex-center;
+  background-color: var(--mainDarkblue-color);
+  color: var(--white-color);
+  padding: 1rem;
+}
