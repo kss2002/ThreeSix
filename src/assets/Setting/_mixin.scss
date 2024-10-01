@@ -14,12 +14,20 @@
   justify-content: center;
 }
 
-// 양쪽 정렬
+// 양쪽 넓게 정렬
 @mixin flex-between {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+// 양쪽 적당히 정렬
+@mixin flex-around {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 // 중앙 정렬
