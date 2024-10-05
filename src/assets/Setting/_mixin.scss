@@ -30,6 +30,22 @@
   justify-content: space-around;
 }
 
+// 왼쪽 첫 스타트
+@mixin flex-start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// 오른쪽 끝 엔드
+@mixin flex-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 // 중앙 정렬
 @mixin position-center {
   position: absolute;

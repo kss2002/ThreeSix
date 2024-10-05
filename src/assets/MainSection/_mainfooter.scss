@@ -1,8 +1,9 @@
 .Mainfooter {
-  background-color: var(--black-color);
-  height: 100%;
+  background-color: var(--mainDarkblue-color);
 }
 .Mainfooter__content {
   color: var(--white-color);
-  padding: 50px;
+  text-align: center;
+  font-size: 36px;
+  padding: 36px;
 }

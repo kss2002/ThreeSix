@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 
 // map - naver
-const { naver } = window;
+// 10.4 기준, 네이버 지도 주석화
+// const { naver } = window;
 
 const MainMap = () => {
+  /*
   useEffect(() => {
     const location = new naver.maps.LatLng(
       37.64379489999975,
@@ -27,10 +29,12 @@ const MainMap = () => {
     });
     // 지도에 마커 생성
   }, []); // 빈 배열은 이 useEffect가 처음에만 실행되도록 설정
-
+*/
   return (
     <section id="Mainmap" className="Mainmap__section">
-      <div id="map" className="Mainmap__map"></div>
+      <div id="map" className="Mainmap__map">
+        map
+      </div>
     </section>
   );
 };

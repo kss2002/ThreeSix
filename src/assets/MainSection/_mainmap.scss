@@ -1,18 +1,19 @@
-// 임시로 만듬
-#Mainmap {
-  height: 100vh;
-}
+// map
 
 .Mainmap__section {
   @include flex-center;
   color: var(--white-color);
-  background-color: var(--subSilver-color);
+  background-color: var(--white-color);
+  height: 1000px;
 
   .Mainmap__map {
+    background-color: var(--subLightblue-color);
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: var(--shadow-main);
     width: 80%;
     height: 600px;
+    color: var(--white-color);
+    text-align: center;
   }
 }

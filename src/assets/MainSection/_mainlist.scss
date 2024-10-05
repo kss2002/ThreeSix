@@ -1,0 +1,41 @@
+// list
+
+.Mainlist__section {
+  @include flex-center;
+  position: relative;
+  height: 1000px;
+
+  .Mainlist__title {
+    position: absolute;
+    font-size: 18px;
+    top: 100px;
+    left: 270px;
+    text-align: center;
+  }
+
+  .Mainlist__container {
+    color: var(--white-color);
+    position: absolute;
+    top: 150px;
+    left: 270px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+
+    .main__grid-items {
+      cursor: pointer;
+      //position: relative;
+      //left: 270px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 12px;
+      height: 400px;
+      width: 400px;
+      background-color: var(--subLightblue-color);
+      border-radius: 4px;
+      font-size: 100px;
+    }
+  }
+}

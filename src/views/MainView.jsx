@@ -4,6 +4,7 @@ import MainHeader from '../components-main/MainHeader';
 import MainIntro from '../components-main/MainIntro';
 import MainFooter from '../components-main/MainFooter';
 import MainMap from '../components-main/MainMap';
+import MainList from '../components-main/MainList';
 
 const MainView = () => {
   return (
@@ -11,6 +12,7 @@ const MainView = () => {
       <MainHeader />
       <Main>
         <MainIntro />
+        <MainList />
         <MainMap />
       </Main>
       <MainFooter />

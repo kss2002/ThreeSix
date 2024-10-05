@@ -4,9 +4,9 @@
 
 .Homeintro__section {
   @include flex-center;
+  background-color: var(--white-color);
   width: 100%;
   height: 100vh;
-  background-color: var(--mainLightblue-color);
 }
 
 .Homeintro__inner {

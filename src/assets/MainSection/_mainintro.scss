@@ -1,10 +1,21 @@
-// 임시로 만듬
-#Mainintro {
-  height: 100vh;
+// intro
+.Mainintro__section {
+  position: relative;
 }
 
-.Mainintro__section {
-  @include flex-center;
-  color: var(--white-color);
-  background-color: var(--subGold-color);
+.Mainintro__back {
+  background-image: url(../img/threesix.png);
+  background-color: rgba(255, 255, 255, 0.2); /* 흰색 반투명 오버레이 */
+  background-blend-mode: overlay; /* 배경 이미지와 색상을 섞음 */
+  width: 100%;
+  height: 250px;
+
+  .Mainintro__font {
+    position: absolute;
+    top: 100px;
+    left: 82px;
+    color: var(--black-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
 }
