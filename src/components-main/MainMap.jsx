@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+//import React, { useEffect } from 'react';
 
 // map - naver
 // 10.4 기준, 네이버 지도 주석화
