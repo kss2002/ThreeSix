@@ -1,5 +1,5 @@
 import React from 'react';
-import threesix from '../assets/img/threesix.png';
+//import threesix from '../assets/img/threesix.png';
 
 const MainIntro = () => {
   return (
