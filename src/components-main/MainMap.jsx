@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const { kakao } = window; // kakao 전역 객체 - 윈도우 인식
 
 const MainMap = () => {
-  const [map, setMap] = useState(null);
+  const [, setMap] = useState(null);
 
   useEffect(() => {
     // state Manage
