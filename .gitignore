@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
+# env 파일 생성 / 환경 변수 세팅 [10/9]

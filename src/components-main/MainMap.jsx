@@ -1,42 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-//import React, { useEffect } from 'react';
-
-// map - naver
-// 10.4 기준, 네이버 지도 주석화
-// const { naver } = window;
+const { kakao } = window; // kakao 전역 객체 - 윈도우 인식
 
 const MainMap = () => {
-  /*
+  const [map, setMap] = useState(null);
+
   useEffect(() => {
-    const location = new naver.maps.LatLng(
-      37.64379489999975,
-      127.11052699999952
-    );
-    // 지도에 표시할 위치의 위도와 경도 설정
-
-    const mapOptions = {
-      center: location,
-      // 중앙에 배치할 위치
-      zoom: 17.5,
-      // 확대 단계
+    // state Manage
+    const container = document.getElementById('map');
+    const options = {
+      center: new kakao.maps.LatLng(37.64401089999978, 127.11004580000017), // 위도 경도
+      level: 2, // Scale Level (Smaller magnifies)
     };
+    const kakaoMap = new kakao.maps.Map(container, options); // id - Get .. latlng - Get
 
-    const map = new naver.maps.Map('map', mapOptions);
-    // DOM 요소에 지도 삽입 (지도를 삽입할 HTML 요소의 id, 지도의 옵션 객체)
+    // Scale Level Limit
+    kakaoMap.setMinLevel(1); // min scale level
+    kakaoMap.setMaxLevel(4); // max scale level
 
-    new naver.maps.Marker({
-      map,
-      position: location,
-    });
-    // 지도에 마커 생성
-  }, []); // 빈 배열은 이 useEffect가 처음에만 실행되도록 설정
-*/
+    // Set map range Limit
+    const bounds = new kakao.maps.LatLngBounds(
+      new kakao.maps.LatLng(37.64367250000025, 127.10923179999932), // 남서쪽 좌표 (latitude, longitude)
+      new kakao.maps.LatLng(37.644037799999644, 127.11147940000015) // 북동쪽 좌표 (latitude, longitude)
+    );
+    kakaoMap.setBounds(bounds); // 설정된 경계를 지도에 적용
+
+    setMap(kakaoMap);
+  }, []);
+
   return (
-    <section id="Mainmap" className="Mainmap__section">
-      <div id="map" className="Mainmap__map">
-        map
-      </div>
+    <section className="Mainmap__section">
+      <div id="map" className="Mainmap__map"></div>
     </section>
   );
 };

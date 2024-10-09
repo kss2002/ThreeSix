@@ -17,7 +17,7 @@ const MainList = () => {
   return (
     <section className="Mainlist__section">
       <p className="Mainlist__title">
-        후문에 있는 식당을 종류순으로 나열했습니다. (주 메뉴를 기준으로
+        후문에 있는 식당을 종류순으로 나열했습니다. <br /> (주 메뉴를 기준으로
         나열했습니다.)
       </p>
       <div className="Mainlist__container">
