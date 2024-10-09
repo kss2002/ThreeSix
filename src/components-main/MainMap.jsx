@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const { kakao } = window; // kakao 전역 객체 - 윈도우 인식
 
 const MainMap = () => {
-  const [, setMap] = useState(null);
+  // const [map, setMap] = useState(null);
 
   useEffect(() => {
     // state Manage
@@ -25,7 +25,7 @@ const MainMap = () => {
     );
     kakaoMap.setBounds(bounds); // 설정된 경계를 지도에 적용
 
-    setMap(kakaoMap);
+    //setMap(kakaoMap);
   }, []);
 
   return (
