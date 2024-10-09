@@ -26,15 +26,11 @@ const MainMap = () => {
     kakaoMap.setBounds(bounds); // 설정된 경계를 지도에 적용
 
     setMap(kakaoMap); // 상태 업데이트
-  }, []);
 
-  // map이 null이 아닐 때 사용
-  useEffect(() => {
     if (map) {
       console.log('map is ready', map);
     }
-  }, [map]); // map이 실행될 때마다 실헹
-
+  }, [map]);
   return (
     <section className="Mainmap__section">
       <div id="map" className="Mainmap__map"></div>
