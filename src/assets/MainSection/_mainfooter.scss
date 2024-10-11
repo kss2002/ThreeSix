@@ -1,10 +1,15 @@
-.Mainfooter {
-  background-color: var(--mainDarkblue-color);
-}
-.Mainfooter__content {
-  color: var(--white-color);
+.Mainfooter__bottom {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 360px;
+  height: 40px;
   text-align: center;
-  font-size: 18px;
-  padding: 18px;
-  font-family: var(--main-font);
+  background-color: white;
+
+  font-family: 'threesix-light';
+}
+
+.Mainfooter__content {
+  margin: 0 auto;
 }

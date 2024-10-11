@@ -1,8 +1,4 @@
 :root {
-  //폰트
-  --main-font: 'DoHyeon';
-  font-family: var(--main-font);
-
   //색상
   --mainDarkblue-color: #112c68;
   --mainLightblue-color: #0091cf;
@@ -11,8 +7,12 @@
   --subGold-color: #95815e;
   --subSilver-color: #91a4a3;
   --subLightgray-color: #bdbdb7;
+
   --white-color: #ffffff;
   --black-color: #000000;
+
+  // main
+  --threesix-color: rgb(50, 175, 114);
 
   //쉐도우
   --shadow-main: rgba(0, 0, 0, 0.35) 0px 5px 15px;

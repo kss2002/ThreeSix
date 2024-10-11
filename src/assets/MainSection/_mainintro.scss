@@ -1,21 +1,18 @@
-// intro
 .Mainintro__section {
-  position: relative;
+  margin: 0 auto;
+  width: 360px;
+  height: 300px;
+  text-align: center;
+  background-color: var(--mainLightblue-color);
+
+  font-family: 'threesix-light';
+
+  padding-top: 12px;
 }
 
-.Mainintro__back {
-  background-image: url(../img/threesix.png);
-  background-color: rgba(255, 255, 255, 0.2); /* 흰색 반투명 오버레이 */
-  background-blend-mode: overlay; /* 배경 이미지와 색상을 섞음 */
-  width: 100%;
-  height: 250px;
+.Mainintro__font {
+  padding-top: 24px;
 
-  .Mainintro__font {
-    position: absolute;
-    top: 100px;
-    left: 82px;
-    color: var(--black-color);
-    font-size: 1.5rem;
-    font-weight: 800;
-  }
+  font-weight: 600;
+  font-size: 20px;
 }

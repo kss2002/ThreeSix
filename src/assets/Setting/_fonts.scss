@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+// 삼육대체 Light
 
-.doHyeon {
-  font-family: 'DoHyeon';
+@font-face {
+  src: url('../font/threesix-Light.ttf'); // 파일 연결
+  font-family: 'threesix-light'; // family 이름 설정
 }
-
-// 폰트 설정 - 배민 두현체

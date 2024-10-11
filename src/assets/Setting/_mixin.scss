@@ -53,11 +53,3 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-// 상단 고정
-@mixin position-fixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-}

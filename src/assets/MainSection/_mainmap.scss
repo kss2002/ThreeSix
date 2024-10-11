@@ -1,19 +1,20 @@
-// map
-
 .Mainmap__section {
-  @include flex-center;
-  color: var(--white-color);
-  background-color: var(--white-color);
-  height: 1000px;
+  margin: 0 auto;
+  width: 360px;
+  height: 300px;
+  text-align: center;
+  background-color: var(--mainLightblue-color);
 
-  .Mainmap__map {
-    background-color: var(--subLightblue-color);
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: var(--shadow-main);
-    width: 50rem;
-    height: 40rem;
-    color: var(--white-color);
-    text-align: center;
-  }
+  font-family: 'threesix-light';
+}
+
+.Mainmap__main {
+  @include flex-center;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 280px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
 }

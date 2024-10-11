@@ -15,15 +15,17 @@ const MaingridItem = ({ title }) => {
 
 const MainList = () => {
   return (
-    <section className="Mainlist__section">
-      <p className="Mainlist__title">
+    <section id="MainList" className="Mainlist__section">
+      <div className="Mainlist__title">
         후문에 있는 식당을 종류순으로 나열했습니다. <br /> (주 메뉴를 기준으로
         나열했습니다.)
-      </p>
-      <div className="Mainlist__container">
-        {maingridNav.map((item) => (
-          <MaingridItem key={item.id} title={item.title} />
-        ))}
+      </div>
+      <div className="Mainlist__menu">
+        <div className="Mainlist__container">
+          {maingridNav.map((item) => (
+            <MaingridItem key={item.id} title={item.title} />
+          ))}
+        </div>
       </div>
     </section>
   );

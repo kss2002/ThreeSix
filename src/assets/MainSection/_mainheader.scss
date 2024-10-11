@@ -1,37 +1,23 @@
 #Mainheader {
-  @include position-fixed;
-  z-index: 100;
+  margin: 0 auto;
+  width: 360px;
+  height: 100px;
+  text-align: center;
+  background-color: var(--threesix-color);
+
+  font-family: 'threesix-light';
+
+  position: sticky;
+  top: 0;
 }
 
-.Mainheader__nav {
-  @include flex-between;
-  background-color: var(--mainDarkblue-color);
-  color: var(--white-color);
-  box-shadow: var(--shadow-main);
-  padding-top: 15px;
-  padding-bottom: 15px;
-  position: absolute;
-  width: 100%;
-
-  .Mainheader__title {
-    position: relative;
-    left: 200px;
-    font-size: 32px;
-    font-family: var(--main-font);
-  }
-
-  .Mainheader__ul {
-    @include flex-between;
-    gap: 50px;
-    position: relative;
-    right: 100px;
-    font-family: var(--main-font);
-
-    .Mainheader__li:hover {
-      transform: scale(1.2);
-      opacity: 0.7;
-    }
-  }
+.Mainheader__title {
+  font-size: 24px;
+  font-weight: 400;
 }
 
-// 네이게이션 애니메이션 포인트
+.Mainheader__ul {
+  @include flex-center;
+  margin-top: 12px;
+  gap: 20px;
+}

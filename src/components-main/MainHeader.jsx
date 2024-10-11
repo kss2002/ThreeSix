@@ -3,16 +3,20 @@ import React from 'react';
 // 핵심 데이터 부품화
 const headerNav = [
   {
-    title: 'Home',
-    url: '#Mainintro',
+    title: 'Intro',
+    url: '#MainIntro',
+  },
+  {
+    title: 'List',
+    url: '#MainList',
   },
   {
     title: 'Map',
-    url: '#Mainmap',
+    url: '#MainMap',
   },
   {
     title: 'End',
-    url: '#Mainfooter',
+    url: '#MainFooter',
   },
 ];
 

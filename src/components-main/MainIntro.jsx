@@ -3,7 +3,7 @@ import React from 'react';
 
 const MainIntro = () => {
   return (
-    <section id="Mainintro" className="Mainintro__section">
+    <section id="MainIntro" className="Mainintro__section">
       <div className="Mainintro__back">
         <div className="Mainintro__font">
           안녕하세요!
