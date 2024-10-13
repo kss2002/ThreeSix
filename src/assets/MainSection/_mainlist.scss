@@ -1,19 +1,22 @@
 // list
 .Mainlist__section {
   margin: 0 auto;
-  width: 360px;
-  height: 300px;
+  width: 344px;
+  height: 440px;
   text-align: center;
-  background-color: var(--mainLightblue-color);
-
-  font-family: 'threesix-light';
+  background-color: var(--white-color);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .Mainlist__title {
   margin: 0 auto;
+  padding-top: 15px;
+  padding-left: 16px;
   width: 360px;
-  font-weight: 600;
-  text-align: center;
+  font-family: 'threesix-light';
+  font-size: 12px;
+  text-align: start;
 }
 
 .Mainlist__menu {
@@ -24,24 +27,41 @@
 
 .Mainlist__container {
   margin: 0 auto;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 12px;
   width: 360px;
+  height: 200px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 12px;
+  grid-column-gap: 8px;
 }
 
 .main__grid-items {
   @include flex-center;
   cursor: pointer;
+  font-family: 'threesix-regular';
+  font-size: 12px;
   margin: 0 auto;
-  padding: 12px;
-  height: 20px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
+  background-color: var(--subLightgray-color);
+  border-radius: 16px;
+}
+
+.Mainmap__title {
+  font-family: 'threesix-light';
+  font-size: 12px;
+  text-align: start;
+  padding-left: 24px;
+}
+
+.Mainmap__main {
+  margin-left: 12px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  width: 320px;
+  height: 140px;
   background-color: var(--subLightblue-color);
   border-radius: 10px;
-  font-size: 14px;
 }

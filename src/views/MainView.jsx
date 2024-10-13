@@ -1,10 +1,9 @@
 import React from 'react';
-import Main from '../components-main/Main';
-import MainHeader from '../components-main/MainHeader';
-import MainIntro from '../components-main/MainIntro';
-import MainFooter from '../components-main/MainFooter';
-import MainMap from '../components-main/MainMap';
-import MainList from '../components-main/MainList';
+import Main from '../main-components/Main';
+import MainHeader from '../main-components/MainHeader';
+import MainIntro from '../main-components/MainIntro';
+import MainFooter from '../main-components/MainFooter';
+import MainList from '../main-components/MainList';
 
 const MainView = () => {
   return (
@@ -13,7 +12,6 @@ const MainView = () => {
       <Main>
         <MainIntro />
         <MainList />
-        <MainMap />
       </Main>
       <MainFooter />
     </>
