@@ -1,11 +1,14 @@
-.Mainfooter__bottom {
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: 360px;
-  height: 40px;
-  text-align: center;
+.Mainfoot {
+  @include flex-center-colum;
   background-color: var(--threesix-color);
+  margin: 0 auto;
+  width: 360px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.Mainfooter__bottom {
+  text-align: center;
   color: white;
   font-family: 'threesix-light';
 }

@@ -3,13 +3,7 @@
   height: 214px;
   padding-top: 48px;
   overflow: hidden;
-  /*mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );*/
+  position: relative;
 }
 
 @keyframes scrollLeft {
@@ -20,12 +14,12 @@
 
 .Mainintro__item {
   position: absolute;
-
+  will-change: transform;
   width: 120px;
   height: 150px;
   background-color: var(--white-color);
   border-radius: 16px;
-  left: max(calc(120px * 8), 90%);
+  left: max(calc(120px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 30s;
   animation-timing-function: linear;

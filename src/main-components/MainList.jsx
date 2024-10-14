@@ -1,19 +1,5 @@
 import React from 'react';
-
-// grid 핵심 데이터 부품화
-const maingridNav = [
-  { id: 1, title: '양식' },
-  { id: 2, title: '중식' },
-  { id: 3, title: '일식' },
-  { id: 4, title: '양식' },
-  { id: 5, title: '분식' },
-  { id: 6, title: '후식' },
-];
-
-// 컴포넌트 이름은 대문자로 시작해야 함
-const MaingridItem = ({ title }) => {
-  return <div className="main__grid-items">{title}</div>;
-};
+import { Link } from 'react-router-dom';
 
 const Main__List__map = () => {
   return (
@@ -21,9 +7,24 @@ const Main__List__map = () => {
       <div className="Mainlist__title">원하는 메뉴를 골라보세요!</div>
       <div className="Mainlist__menu">
         <div className="Mainlist__container">
-          {maingridNav.map((item) => (
-            <MaingridItem key={item.id} title={item.title} />
-          ))}
+          <Link to="/western">
+            <div className="main__grid-items">양식</div>
+          </Link>
+          <Link to="/chinese">
+            <div className="main__grid-items">중식</div>
+          </Link>
+          <Link to="/korean">
+            <div className="main__grid-items">한식</div>
+          </Link>
+          <Link to="/japanese">
+            <div className="main__grid-items">일식</div>
+          </Link>
+          <Link to="/school">
+            <div className="main__grid-items">분식</div>
+          </Link>
+          <Link to="/dessert">
+            <div className="main__grid-items">후식</div>
+          </Link>
         </div>
       </div>
       <div className="Mainmap__title">지도로 식당 위치를 찾아보세요!</div>
