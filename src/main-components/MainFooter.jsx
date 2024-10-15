@@ -2,9 +2,9 @@ import React from 'react';
 
 const MainFooter = () => {
   return (
-    <div id="MainFooter" className="Mainfoot">
+    <footer id="MainFooter">
       <div className="Mainfooter__bottom">삼식아</div>
-    </div>
+    </footer>
   );
 };
 

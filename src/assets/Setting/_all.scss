@@ -1,12 +1,22 @@
-/* 10/10
+/* 10/15
 스타일 - all 
 */
+// body 전체적인 개편
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--threesix-color);
   background-image: url(../img/back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body,
+html {
+  overflow-x: hidden;
 }
 
 // 링크 초기화

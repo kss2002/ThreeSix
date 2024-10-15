@@ -9,6 +9,9 @@ const MainHeader = () => {
         <br />
         다양한 식당을 찾아보세요!
       </div>
+      <div className="Mainheader__little">
+        (휴대폰으로 접속하는 것을 권장합니다😊)
+      </div>
     </header>
   );
 };

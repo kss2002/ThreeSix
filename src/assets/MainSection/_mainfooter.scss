@@ -1,14 +1,13 @@
-.Mainfoot {
-  @include flex-center-colum;
-  background-color: var(--threesix-color);
-  margin: 0 auto;
-  width: 360px;
-  height: 20px;
-  margin-top: 20px;
+#MainFooter {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
 }
 
 .Mainfooter__bottom {
   text-align: center;
   color: white;
   font-family: 'threesix-light';
+  height: 40px;
+  padding-top: 20px;
 }
