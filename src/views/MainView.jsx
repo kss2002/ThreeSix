@@ -4,6 +4,7 @@ import MainHeader from '../main-components/MainHeader';
 import MainIntro from '../main-components/MainIntro';
 import MainFooter from '../main-components/MainFooter';
 import MainList from '../main-components/MainList';
+import MainContact from '../main-components/MainContact';
 
 const MainView = () => {
   return (
@@ -12,6 +13,7 @@ const MainView = () => {
       <Main>
         <MainIntro />
         <MainList />
+        <MainContact />
       </Main>
       <MainFooter />
     </>

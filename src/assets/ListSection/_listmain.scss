@@ -1,7 +1,89 @@
 .list__main {
   margin: 0 auto;
-  height: 800px;
   width: 360px;
+  height: 100%;
   background-color: white;
-  border-radius: 24px;
+  box-shadow: var(--shadow-main);
+}
+
+.list__brand {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  padding-top: 28px;
+}
+
+.list__img {
+  width: 160px;
+  height: 80px;
+  background-color: var(--subLightgray-color);
+  border-radius: 8px;
+  margin-left: 14px;
+}
+
+.list__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.list__name {
+  font-size: 12px;
+  font-family: 'threesix-regular';
+  text-align: start;
+  padding-left: 6px;
+  padding-top: 4px;
+
+  white-space: pre-wrap; // \n 줄바꿈
+}
+
+.list__businessHours {
+  font-size: 8px;
+  font-family: 'threesix-light';
+  text-align: start;
+  padding-left: 6px;
+  padding-top: 34px;
+  color: #787878;
+}
+
+.list__phoneNumber {
+  font-size: 8px;
+  font-family: 'threesix-light';
+  text-align: start;
+  padding-left: 6px;
+  padding-top: 8px;
+  color: #787878;
+}
+
+.list__line {
+  height: 1px;
+  width: 360px;
+  background-color: #e2e2e2;
+  margin-top: 20px;
+}
+
+.list__bar {
+  height: 8px;
+  width: 360px;
+  background-color: #ebecf2;
+}
+
+.list__back {
+  margin-top: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'threesix-regular';
+  color: #898989;
+}
+
+.list__cat {
+  width: 84px;
+  height: 84px;
+  background-image: url(../img/cat.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }

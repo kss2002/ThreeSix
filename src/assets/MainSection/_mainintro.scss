@@ -1,9 +1,12 @@
 .wrapper {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 214px;
   padding-top: 48px;
   overflow: hidden;
   position: relative;
+  text-align: center;
 }
 
 @keyframes scrollLeft {
@@ -12,7 +15,17 @@
   }
 }
 
+// 애니메이션 사진 컨트롤 beta
+.ani {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
 .Mainintro__item {
+  box-shadow: var(--shadow-sub);
   position: absolute;
   will-change: transform;
   width: 120px;

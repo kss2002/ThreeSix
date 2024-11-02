@@ -9,14 +9,15 @@ body {
   box-sizing: border-box;
   background-color: var(--threesix-color);
   background-image: url(../img/back.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: 100%;
+  //background-repeat: no-repeat;
   background-position: center;
 }
 
 body,
 html {
   overflow-x: hidden;
+  height: 100%;
 }
 
 // 링크 초기화

@@ -1,0 +1,46 @@
+.detail__main {
+  margin: 0 auto;
+  width: 360px;
+  height: 100%;
+  background-color: white;
+  box-shadow: var(--shadow-main);
+  padding-bottom: 10px;
+}
+
+.detail__mainmenu {
+  font-size: 16px;
+  font-family: 'threesix-regular';
+  text-align: start;
+  padding-left: 18px;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  color: black;
+}
+
+.detail__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.detail__Menu {
+  font-size: 14px;
+  font-family: 'threesix-light';
+  text-align: start;
+  padding-left: 24px;
+  color: black;
+  white-space: pre-wrap; // \n 줄바꿈
+}
+
+.point {
+  color: black;
+}
+
+.detail__price {
+  font-size: 14px;
+  font-family: 'threesix-light';
+  text-align: end;
+  padding-right: 24px;
+  color: black;
+}

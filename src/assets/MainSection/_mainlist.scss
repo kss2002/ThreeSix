@@ -1,67 +1,82 @@
 // list
-.Mainlist__section {
+
+.Mainlist__img {
+  background-image: url(../img/Group.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 328px;
+  height: 444px;
   margin: 0 auto;
-  width: 344px;
-  height: 440px;
   text-align: center;
-  background-color: var(--white-color);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
 }
 
 .Mainlist__title {
-  margin: 0 auto;
-  padding-top: 32px;
-  padding-left: 16px;
-  width: 360px;
   font-family: 'threesix-light';
   font-size: 12px;
   text-align: start;
+  padding-top: 48px;
+  padding-left: 26px;
 }
 
-.Mainlist__menu {
+.Mainlist__container {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 12px;
+  grid-column-gap: 2px;
+  justify-content: center;
+}
+
+.Main__img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Mainlist__container {
-  margin: 0 auto;
-  padding-top: 12px;
-  width: 360px;
-  height: 200px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 12px;
-  grid-column-gap: 8px;
+.Main__text {
+  font-size: 10px;
+  text-align: center;
 }
 
 .main__grid-items {
-  @include flex-center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   font-family: 'threesix-regular';
   font-size: 12px;
-  margin: 0 auto;
-  height: 80px;
-  width: 80px;
+  height: 64px;
+  width: 64px;
   background-color: var(--subLightgray-color);
   border-radius: 16px;
 }
 
 .Mainmap__title {
+  text-align: start;
+  padding-top: 8px;
+  padding-left: 26px;
+  margin: 0 auto;
   font-family: 'threesix-light';
   font-size: 12px;
-  text-align: start;
-  padding-left: 24px;
 }
 
 .Mainmap__main {
-  margin-left: 12px;
-  margin-top: 16px;
-  margin-bottom: 14px;
-  width: 320px;
-  height: 140px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 280px;
+  height: 120px;
   background-color: var(--subLightblue-color);
   border-radius: 10px;
+}
+
+.Mainmap__sub {
+  text-align: center;
+  padding-top: 12px;
+  margin: 0 auto;
+  font-family: 'threesix-light';
+  font-size: 6px;
 }
