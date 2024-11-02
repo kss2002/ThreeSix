@@ -1,4 +1,5 @@
 import React from 'react';
+import { Map } from 'react-kakao-maps-sdk';
 import { Link } from 'react-router-dom';
 //사진
 import w__port from '../assets/img/grid/w__port.png';
@@ -9,7 +10,9 @@ import s__port from '../assets/img/grid/s__port.png';
 import d__port from '../assets/img/grid/d__port.png';
 import f__port from '../assets/img/grid/f__port.png';
 
-const Main__List__map = () => {
+// 지도 api
+
+const Main__List__map = (props) => {
   return (
     <div className="Mainlist__img">
       <div className="Mainlist__title">원하는 메뉴를 골라보세요!</div>
@@ -59,7 +62,13 @@ const Main__List__map = () => {
           </Link>
         </div>
         <div className="Mainmap__title">지도로 식당 위치를 찾아보세요!</div>
-        <div className="Mainmap__main"></div>
+        <div id="map" className="Mainmap__main">
+          <Map
+            center={{ lat: 37.64398229999981, lng: 127.11030229999939 }}
+            style={{ width: '280px', height: '120px' }}
+            level={2}
+          />
+        </div>
         <div className="Mainmap__sub">삼육대학교 유니브 삼식아팀</div>
       </div>
     </div>

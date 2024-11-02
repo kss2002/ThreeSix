@@ -87,3 +87,32 @@
   margin: 0 auto;
   padding-bottom: 40px;
 }
+
+.list__caution {
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  height: 30px;
+  margin-top: 20px;
+  padding-top: 30px;
+  font-family: 'threesix-regular';
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: var(--shadow-border);
+}
+
+.desc {
+  margin: 0 auto;
+  text-align: start;
+  background-color: white;
+  width: 290px;
+  height: 100px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  font-family: 'threesix-light';
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: var(--shadow-border);
+}
