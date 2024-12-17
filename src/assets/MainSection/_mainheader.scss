@@ -1,26 +1,109 @@
-.Mainheader__samslka {
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 42px;
-  font-family: 'threesix-regular';
-  font-size: 24px;
-  color: var(--white-color);
+//모바일 사이즈
+@media (max-width: 500px) {
+  .Mainheader__samslka {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    font-family: 'threesix-regular';
+    font-size: 24px;
+    color: var(--white-color);
+  }
+
+  .Mainheader__title-mobile {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 32px;
+    font-family: 'threesix-light';
+    font-size: 16x;
+    color: var(--white-color);
+  }
+
+  .MainHeader__title-pc {
+    display: none;
+  }
+
+  .MainAni {
+    display: none;
+  }
 }
 
-.Mainheader__title {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 32px;
-  font-family: 'threesix-light';
-  font-size: 16x;
-  color: var(--white-color);
+// 태블릿 사이즈
+@media (min-width: 500px) and (max-width: 992px) {
+  .Mainheader__samslka {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    font-family: 'threesix-regular';
+    font-size: 24px;
+    color: var(--white-color);
+  }
+
+  .Mainheader__title {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 32px;
+    font-family: 'threesix-light';
+    font-size: 16x;
+    color: var(--white-color);
+  }
 }
 
-.Mainheader__little {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 4px;
-  font-family: 'threesix-light';
-  font-size: 10px;
-  color: var(--subLightgray-color);
+// pc 사이즈
+@media (min-width: 993px) {
+  .Mainheader__background {
+    background-color: var(--subLightgray-color);
+    width: 100vw;
+    height: 22rem;
+    padding-top: 2rem;
+  }
+
+  .Mainheader__samslka {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    text-align: start;
+    font-family: 'threesix-regular';
+    font-size: 24px;
+    background-color: var(--threesix-color);
+    color: var(--white-color);
+  }
+
+  .MainHeader__contain {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: var(--white-color);
+    width: 80vw;
+    height: 20rem;
+    margin: 0 auto;
+    border-radius: 24px;
+    box-shadow: var(--shadow-main);
+  }
+
+  .Mainheader__title-mobile {
+    display: none;
+  }
+
+  .MainHeader__title-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-left: 4rem;
+    text-align: start;
+    font-family: 'threesix-light';
+    font-size: 26px;
+    color: var(--black-color);
+  }
+
+  .MainAni {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin-right: 1rem;
+    margin-left: 8rem;
+  }
 }

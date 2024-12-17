@@ -65,11 +65,10 @@ const Main__List__map = (props) => {
         <div id="map" className="Mainmap__main">
           <Map
             center={{ lat: 37.64398229999981, lng: 127.11030229999939 }}
-            style={{ width: '280px', height: '120px' }}
+            style={{ width: '280px', height: '140px' }}
             level={2}
           />
         </div>
-        <div className="Mainmap__sub">삼육대학교 유니브 삼식아팀</div>
       </div>
     </div>
   );
