@@ -1,12 +1,16 @@
 //모바일 사이즈
 @media (max-width: 500px) {
-  .Mainheader__samslka {
+  .Mainheader {
     margin: 0 auto;
     text-align: center;
     padding-top: 42px;
     font-family: 'threesix-regular';
     font-size: 24px;
     color: var(--white-color);
+  }
+
+  .Mainheader__nav {
+    display: none;
   }
 
   .Mainheader__title-mobile {
@@ -22,14 +26,14 @@
     display: none;
   }
 
-  .MainAni {
+  .Mainheader__img {
     display: none;
   }
 }
 
 // 태블릿 사이즈
 @media (min-width: 500px) and (max-width: 992px) {
-  .Mainheader__samslka {
+  .Mainheader {
     margin: 0 auto;
     text-align: center;
     padding-top: 42px;
@@ -50,60 +54,65 @@
 
 // pc 사이즈
 @media (min-width: 993px) {
-  .Mainheader__background {
-    background-color: var(--subLightgray-color);
-    width: 100vw;
-    height: 22rem;
-    padding-top: 2rem;
-  }
-
-  .Mainheader__samslka {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    padding-left: 4rem;
-    text-align: start;
-    font-family: 'threesix-regular';
-    font-size: 24px;
-    background-color: var(--threesix-color);
-    color: var(--white-color);
-  }
-
-  .MainHeader__contain {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    background-color: var(--white-color);
-    width: 80vw;
-    height: 20rem;
-    margin: 0 auto;
-    border-radius: 24px;
-    box-shadow: var(--shadow-main);
-  }
-
   .Mainheader__title-mobile {
     display: none;
   }
 
-  .MainHeader__title-pc {
+  .Mainheader__background-pc {
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    height: 32rem;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-left: 4rem;
-    text-align: start;
-    font-family: 'threesix-light';
-    font-size: 26px;
-    color: var(--black-color);
+    justify-content: space-between;
   }
 
-  .MainAni {
+  .Mainheader {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    font-family: 'threesix-regular';
+    font-size: 32px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+
+    border-bottom: 1px solid var(--threesixPC-color);
+  }
+
+  .Mainheader__nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 200px;
-    margin-right: 1rem;
-    margin-left: 8rem;
+    justify-content: space-around;
+    gap: 100px;
+    margin-right: 140px;
+
+    font-size: 24px;
+
+    :hover {
+      color: var(--threesix-color);
+    }
+  }
+
+  .MainHeader__title-pc {
+    font-family: 'threesix-light';
+    font-size: 26px;
+    margin-left: 130px;
+    text-align: start;
+  }
+
+  .Mainheader__img {
+    margin-right: 200px;
   }
 }

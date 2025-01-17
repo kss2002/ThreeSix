@@ -1,9 +1,41 @@
-.detail__head {
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  font-family: 'threesix-regular';
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+// 모바일
+@media (max-width: 500px) {
+  .detail__head {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: 'threesix-regular';
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .subHeader {
+    display: none;
+  }
+}
+
+//pc
+@media (min-width: 993px) {
+  .detail__head {
+    display: none;
+  }
+
+  .SubHeader {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    font-family: 'threesix-regular';
+    font-size: 32px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+
+    border-bottom: 1px solid var(--threesixPC-color);
+  }
 }

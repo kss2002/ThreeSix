@@ -9,34 +9,64 @@ import port06 from '../assets/img/Animation/port06.png';
 import port07 from '../assets/img/Animation/port07.png';
 import port08 from '../assets/img/Animation/port08.png';
 
+const wrapper__images = [
+  { src: port01, alt: '사진 1' },
+  { src: port02, alt: '사진 2' },
+  { src: port03, alt: '사진 3' },
+  { src: port04, alt: '사진 4' },
+  { src: port05, alt: '사진 5' },
+  { src: port06, alt: '사진 6' },
+  { src: port07, alt: '사진 7' },
+  { src: port08, alt: '사진 8' },
+];
+
+const ImageGrid = ({ className, reverse }) => {
+  const images = reverse ? [...wrapper__images].reverse() : wrapper__images;
+  return (
+    <div className={className}>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`item${reverse ? 'Right' : 'Left'} item${index + 1}`}
+        >
+          <img className="PC-ani" src={image.src} alt={image.alt} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const ImageWrapperMobile = ({ className }) => (
+  <div className={className}>
+    {wrapper__images.map((image, index) => (
+      <div key={index} className={`Mainintro__item item${index + 1}`}>
+        <img className="ani" src={image.src} alt={image.alt} />
+      </div>
+    ))}
+  </div>
+);
+
+const ImageWrapperPC = () => (
+  <main className="Maintro__background">
+    <p className="Mainintro__text">
+      이젠 먹고 싶은 메뉴를 쉽게 찾아보며
+      <br />
+      시간을 아껴 보세요!
+    </p>
+    <section>
+      <ImageGrid className="wrapper-pc" reverse={false} />
+      <div className="intro-beta"></div>
+      <ImageGrid className="wrapper-bottom" reverse={true} />
+    </section>
+  </main>
+);
+
 const MainIntro = () => {
   return (
-    <div className="wrapper">
-      <div className="Mainintro__item item1">
-        <img className="ani" src={port01} alt="사진" />
-      </div>
-      <div className="Mainintro__item item2">
-        <img className="ani" src={port02} alt="사진" />
-      </div>
-      <div className="Mainintro__item item3">
-        <img className="ani" src={port03} alt="사진" />
-      </div>
-      <div className="Mainintro__item item4">
-        <img className="ani" src={port04} alt="사진" />
-      </div>
-      <div className="Mainintro__item item5">
-        <img className="ani" src={port05} alt="사진" />
-      </div>
-      <div className="Mainintro__item item6">
-        <img className="ani" src={port06} alt="사진" />
-      </div>
-      <div className="Mainintro__item item7">
-        <img className="ani" src={port07} alt="사진" />
-      </div>
-      <div className="Mainintro__item item8">
-        <img className="ani" src={port08} alt="사진" />
-      </div>
-    </div>
+    <section>
+      <ImageWrapperMobile className="wrapper-mobile" />
+      <ImageWrapperPC />
+    </section>
   );
 };
 

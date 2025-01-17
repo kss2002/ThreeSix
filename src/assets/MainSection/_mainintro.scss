@@ -1,72 +1,199 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 214px;
-  padding-top: 48px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
+// 모바일
+@media (max-width: 500px) {
+  .Maintro__background {
+    display: none;
+  }
 
-@keyframes scrollLeft {
-  to {
-    left: -200px;
+  .wrapper-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 214px;
+    padding-top: 48px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+
+  @keyframes scrollMobile {
+    to {
+      left: -200px;
+    }
+  }
+
+  // 애니메이션 사진 컨트롤 beta
+  .ani {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+
+  .Mainintro__item {
+    box-shadow: var(--shadow-sub);
+    position: absolute;
+    will-change: transform;
+    width: 120px;
+    height: 150px;
+    background-color: var(--white-color);
+    border-radius: 16px;
+    left: max(calc(120px * 8), 100%);
+    animation-name: scrollMobile;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+
+  .item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+
+  .item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+
+  .item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  }
+
+  .item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  }
+
+  .item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  }
+
+  .item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  }
+
+  .item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
   }
 }
 
-// 애니메이션 사진 컨트롤 beta
-.ani {
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
-  margin: 0 auto;
-  padding-top: 32px;
-}
+// pc
+@media (min-width: 993px) {
+  .Maintro__background {
+    height: 400px;
 
-.Mainintro__item {
-  box-shadow: var(--shadow-sub);
-  position: absolute;
-  will-change: transform;
-  width: 120px;
-  height: 150px;
-  background-color: var(--white-color);
-  border-radius: 16px;
-  left: max(calc(120px * 8), 100%);
-  animation-name: scrollLeft;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      0deg,
+      rgba(165, 255, 133, 0.40304043980873594) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
 
-.item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-}
+  .Mainintro__text {
+    font-family: 'threesix-regular';
+    font-size: 30px;
+    text-align: center;
+    margin-top: 180px;
 
-.item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-}
+    &:hover {
+      color: var(--threesixPC-color);
+    }
+  }
 
-.item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-}
+  .wrapper-mobile {
+    display: none;
+  }
 
-.item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-}
+  .intro-beta {
+    height: 300px;
+    width: 100vw;
+    background-color: inherit;
+  }
 
-.item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-}
+  .wrapper-bottom {
+    height: 400px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      180deg,
+      rgba(165, 255, 133, 0.40304043980873594) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
 
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-}
+  @keyframes scrollRight {
+    to {
+      right: -200px;
+    }
+  }
 
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-}
+  .PC-ani {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-left: 40px;
+  }
 
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  .itemLeft,
+  .itemRight {
+    width: 206px;
+    height: 256px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    box-shadow: var(--shadow-sub);
+  }
+
+  .itemLeft {
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+  }
+
+  .itemRight {
+    right: max(calc(200px * 8), calc(100% + 200px));
+    animation-name: scrollRight;
+  }
+
+  .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+
+  .item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+
+  .item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+
+  .item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+  }
+
+  .item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+  }
+
+  .item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+  }
+
+  .item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+  }
+
+  .item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  }
 }

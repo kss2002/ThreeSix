@@ -1,10 +1,12 @@
 // food-brand 전역 컴포넌트
 import React from 'react';
 import { Link } from 'react-router-dom';
+import readyimg from '../assets/img/readyimg.png';
 
 // MenuItem 컴포넌트 - 이름 및 가격
 export const MenuItem = ({ name, price }) => (
   <div className="detail__container">
+    <img className="detail__img" src={readyimg} alt="사진 준비 중" />
     <div className="detail__Menu">{name}</div>
     <div className="point"></div>
     <div className="detail__price">{price}</div>
@@ -13,12 +15,20 @@ export const MenuItem = ({ name, price }) => (
 
 // MenuSection 컴포넌트 - title 및 아이템 관리
 export const MenuSection = ({ title, items }) => (
-  <div className="detail__main">
+  <section>
+    <div className="detail__main">
+      <div className="detail__mainmenu">{title}</div>
+      {items.map((menu, index) => (
+        <MenuItem key={index} name={menu.name} price={menu.price} />
+      ))}
+    </div>
     <div className="detail__mainmenu">{title}</div>
-    {items.map((menu, index) => (
-      <MenuItem key={index} name={menu.name} price={menu.price} />
-    ))}
-  </div>
+    <div className="detail__grid">
+      {items.map((menu, index) => (
+        <MenuItem key={index} name={menu.name} price={menu.price} />
+      ))}
+    </div>
+  </section>
 );
 
 // MenuBottom 컴포넌트 - 메뉴 바텀 부품화

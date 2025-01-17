@@ -1,8 +1,11 @@
-.list__foot {
-  color: var(--white-color);
-  font-family: 'threesix-light';
-  text-align: center;
-  font-size: 14px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+// 모바일
+@media (max-width: 500px) {
+  .list__foot {
+    color: var(--white-color);
+    font-family: 'threesix-light';
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

@@ -1,73 +1,194 @@
 // list
+// 모바일
+@media (max-width: 500px) {
+  .Mainlist-pc {
+    display: none;
+  }
 
-.Mainlist__img {
-  background-image: url(../img/Group.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 328px;
-  height: 444px;
-  margin: 0 auto;
-  text-align: center;
+  #researchMap {
+    display: none;
+  }
+
+  .Mainlist__img {
+    background-image: url(../img/Group.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 328px;
+    height: 444px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .Mainlist__title {
+    font-family: 'threesix-light';
+    font-size: 12px;
+    text-align: start;
+    padding-top: 48px;
+    padding-left: 26px;
+  }
+
+  .Mainlist__container {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 12px;
+    grid-column-gap: 2px;
+    justify-content: center;
+  }
+
+  .Main__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Main__text {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .main__grid-items {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'threesix-regular';
+    font-size: 12px;
+    height: 64px;
+    width: 64px;
+    background-color: var(--subLightgray-color);
+    border-radius: 16px;
+  }
+
+  .Mainmap__title {
+    text-align: start;
+    padding-top: 8px;
+    padding-left: 26px;
+    margin: 0 auto;
+    font-family: 'threesix-light';
+    font-size: 12px;
+  }
+
+  .Mainmap__main {
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 280px;
+    background-color: var(--subLightblue-color);
+    border-radius: 10px;
+  }
 }
 
-.Mainlist__title {
-  font-family: 'threesix-light';
-  font-size: 12px;
-  text-align: start;
-  padding-top: 48px;
-  padding-left: 26px;
-}
+//pc
+@media (min-width: 993px) {
+  // slick
+  .slick-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 
-.Mainlist__container {
-  display: grid;
-  padding: 16px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-row-gap: 12px;
-  grid-column-gap: 2px;
-  justify-content: center;
-}
+  .slick-prev::before,
+  .slick-next::before {
+    display: none; /* 기본 화살표 제거 */
+  }
 
-.Main__img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .slider-img {
+    height: 300px;
+    width: 300px;
+    display: inline-block; /* Link를 블록으로 설정 */
 
-.Main__text {
-  font-size: 10px;
-  text-align: center;
-}
+    box-shadow: var(--shadow-main);
+    border-radius: 24px;
 
-.main__grid-items {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-family: 'threesix-regular';
-  font-size: 12px;
-  height: 64px;
-  width: 64px;
-  background-color: var(--subLightgray-color);
-  border-radius: 16px;
-}
+    margin: 0 auto;
+  }
 
-.Mainmap__title {
-  text-align: start;
-  padding-top: 8px;
-  padding-left: 26px;
-  margin: 0 auto;
-  font-family: 'threesix-light';
-  font-size: 12px;
-}
+  // list
+  .Mainlist-mobile {
+    display: none;
+  }
 
-.Mainmap__main {
-  margin: 0 auto;
-  margin-top: 16px;
-  width: 280px;
-  background-color: var(--subLightblue-color);
-  border-radius: 10px;
+  .Mainlist-pc__top {
+    height: 400px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      0deg,
+      rgba(165, 255, 133, 0.40304043980873594) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .Mainlist-pc__mainTitle {
+    font-family: 'threesix-regular';
+    font-size: 32px;
+    text-align: center;
+    margin-top: 600px;
+
+    &:hover {
+      color: var(--threesixPC-color);
+    }
+  }
+
+  .Mainlist-pc__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 60px;
+    gap: 40px;
+    font-family: 'threesix-light';
+
+    cursor: pointer;
+
+    :hover {
+      color: var(--threesixPC-color);
+    }
+  }
+
+  .Mainlist-pc__bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+
+  .Mainlist-pc__bar {
+    height: 2px;
+    width: 100px;
+    background-color: gray;
+    transition: background-color 0.3s ease;
+  }
+
+  .Mainlist-pc__bar.active {
+    height: 6px;
+  }
+
+  .Mainlist-pc__bottom {
+    height: 420px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      180deg,
+      rgba(165, 255, 133, 0.40304043980873594) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  // map
+  .Mainmap-pc__title {
+    font-family: 'threesix-regular';
+    font-size: 36px;
+    text-align: center;
+    margin-top: 100px;
+
+    &:hover {
+      color: var(--threesixPC-color);
+    }
+  }
 }

@@ -1,18 +1,16 @@
 :root {
   //색상
-  --mainDarkblue-color: #112c68;
-  --mainLightblue-color: #0091cf;
-  --subLightblue-color: rgb(206, 228, 239); //추가
-  --subDarkgreen-color: #373c35;
-  --subGold-color: #95815e;
   --subSilver-color: #91a4a3;
-  --subLightgray-color: rgb(240, 240, 240);
+  --subLightgray-color: #f0f0f0;
+  --subGray-color: #f2f2f2; //2025.1.6
 
   --white-color: #ffffff;
   --black-color: #000000;
 
   // main
   --threesix-color: rgb(50, 175, 114);
+  // pc 스케일
+  --threesixPC-color: #88c27c;
 
   //쉐도우
   --shadow-main: rgba(0, 0, 0, 0.35) 0px 5px 15px;

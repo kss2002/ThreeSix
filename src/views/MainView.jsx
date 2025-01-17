@@ -3,16 +3,22 @@ import Main from '../main-components/Main';
 import MainHeader from '../main-components/MainHeader';
 import MainIntro from '../main-components/MainIntro';
 import MainFooter from '../main-components/MainFooter';
-import MainList from '../main-components/MainList';
 import MainContact from '../main-components/MainContact';
+import Search from '../discharge/Search';
+import MainListMobile from '../main-components/MainListMobile';
+import MainListPC from '../main-components/MainListPC';
+import MainHello from '../main-components/MainHello';
 
 const MainView = () => {
   return (
     <>
       <MainHeader />
       <Main>
+        <MainHello />
+        <Search />
         <MainIntro />
-        <MainList />
+        <MainListMobile />
+        <MainListPC />
         <MainContact />
       </Main>
       <MainFooter />

@@ -1,0 +1,40 @@
+// 모바일
+@media (max-width: 500px) {
+  #UpDown {
+    display: none;
+  }
+}
+
+//pc
+@media (min-width: 993px) {
+  .Up_btn {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background-color: #d3f3c9;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--black-color);
+
+    z-index: 100;
+  }
+
+  .Down_btn {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background-color: #d3f3c9;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--black-color);
+
+    z-index: 100;
+  }
+
+  .UpDown__icon {
+    height: 60%;
+    width: 60%;
+  }
+}
