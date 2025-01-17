@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const RinseuList__coffee = [
@@ -202,6 +205,12 @@ const Rinseu = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">린스테이블</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">린스테이블</div>
+        </div>
       </header>
       <main>
         <MenuSection title="COFFEE" items={RinseuList__coffee} />
@@ -214,8 +223,9 @@ const Rinseu = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

@@ -22,11 +22,14 @@ export const MenuSection = ({ title, items }) => (
         <MenuItem key={index} name={menu.name} price={menu.price} />
       ))}
     </div>
-    <div className="detail__mainmenu">{title}</div>
-    <div className="detail__grid">
-      {items.map((menu, index) => (
-        <MenuItem key={index} name={menu.name} price={menu.price} />
-      ))}
+    <div className="detail__grid-container">
+      <div className="detail__mainmenu">{title}</div>
+      <div className="detail__grid">
+        {items.map((menu, index) => (
+          <MenuItem key={index} name={menu.name} price={menu.price} />
+        ))}
+      </div>
+      <div className="white"></div>
     </div>
   </section>
 );

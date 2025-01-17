@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const TorikokoroList__menu = [
@@ -70,6 +73,12 @@ const Torikokoro = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">토리코코로</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">토리코코로</div>
+        </div>
       </header>
       <main>
         <MenuSection title="사장님 추천 메뉴" items={TorikokoroList__menu} />
@@ -78,8 +87,9 @@ const Torikokoro = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

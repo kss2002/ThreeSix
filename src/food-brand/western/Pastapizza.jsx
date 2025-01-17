@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const PastapizzaList__tomato = [
@@ -378,6 +381,14 @@ const Pastapizza = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">오렌지몽키파스타&마르코죤스피자</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">
+            오렌지몽키파스타&마르코죤스피자
+          </div>
+        </div>
       </header>
       <main>
         <MenuSection title="토마토 소스" items={PastapizzaList__tomato} />
@@ -394,8 +405,9 @@ const Pastapizza = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

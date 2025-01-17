@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import UpDown from '../UpDown';
+import MainFooter from '../../main-components/MainFooter';
 
 // 리스트 선언
 const ManyeoList__main = [
@@ -186,6 +189,12 @@ const Manyeo = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">마녀 떡볶이</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">마녀 떡볶이</div>
+        </div>
       </header>
       <main>
         <MenuSection title="마녀 즉석 떡볶이 메뉴" items={ManyeoList__main} />
@@ -198,8 +207,9 @@ const Manyeo = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

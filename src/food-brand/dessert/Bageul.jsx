@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import UpDown from '../UpDown';
+import MainFooter from '../../main-components/MainFooter';
 
 // 리스트 선언
 const BageulList__signiture = [
@@ -192,6 +195,12 @@ const Bageul = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">바글바글 베이커리</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">바글바글 베이커리</div>
+        </div>
       </header>
       <main>
         <MenuSection title="SIGNITURE TEA" items={BageulList__signiture} />
@@ -206,8 +215,9 @@ const Bageul = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

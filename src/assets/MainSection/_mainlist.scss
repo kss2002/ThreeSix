@@ -90,11 +90,30 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-bottom: 20px;
   }
 
   .slick-prev::before,
   .slick-next::before {
     display: none; /* 기본 화살표 제거 */
+  }
+
+  .slider__title {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'threesix-regular';
+  }
+
+  .slider__num {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'threesix-light';
+  }
+
+  .slider__time {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'threesix-light';
   }
 
   .slider-img {
@@ -159,14 +178,14 @@
     margin-bottom: 80px;
   }
 
-  .Mainlist-pc__bar {
+  .Mainlistpc__bar {
     height: 2px;
     width: 100px;
     background-color: gray;
     transition: background-color 0.3s ease;
   }
 
-  .Mainlist-pc__bar.active {
+  .Mainlistpc__bar.active {
     height: 6px;
   }
 

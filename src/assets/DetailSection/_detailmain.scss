@@ -62,37 +62,44 @@
     height: 300px;
     width: 100vw;
     background-color: var(--threesixPC-color);
-    padding: 10px;
+    padding-top: 10px;
   }
 
   .detail-pc__title {
     font-size: 48px;
     font-family: 'threesix-light';
     color: white;
-
+    margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    margin-top: 120px;
+  .detail__grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr; /* 상단 제목과 그리드 영역 */
+    grid-template-columns: 1fr; /* 한 열 */
+    justify-items: center; /* 가로 중앙 정렬 */
+    align-items: start; /* 세로 정렬은 위쪽으로 */
+    gap: 20px; /* 제목과 그리드 사이 간격 */
+    margin-top: 50px; /* 상단 여백 */
   }
 
   .detail__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 네 개의 열 */
     grid-auto-rows: auto; /* 행 자동 확장 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-content: center; /* 세로 중앙 정렬 */
-
-    width: 80%; /* 컨테이너의 너비를 제한 */
-    margin: 0 auto; /* 화면 중앙으로 정렬 */
+    justify-items: center; /* 각 아이템 가로 정렬 */
+    gap: 30px 20px; /* 행과 열 간격 */
+    width: 80%; /* 컨테이너 너비 제한 */
+    max-width: 1200px; /* 최대 너비 제한 */
   }
 
   .detail__Menu {
     font-size: 14px;
     font-family: 'threesix-light';
-    text-align: start;
-    padding-left: 24px;
+    text-align: center;
+
     color: black;
     white-space: pre-wrap; // \n 줄바꿈
   }
@@ -100,23 +107,27 @@
   .detail__price {
     font-size: 14px;
     font-family: 'threesix-light';
-    text-align: start;
-    padding-right: 24px;
+    text-align: center;
     color: black;
   }
 
   .detail__img {
     height: 240px;
     width: 240px;
+    border-radius: 24px;
   }
 
   .detail__mainmenu {
-    font-size: 16px;
+    font-size: 24px;
     font-family: 'threesix-regular';
-    text-align: start;
-    padding-left: 18px;
-    padding-top: 20px;
-    padding-bottom: 14px;
-    color: black;
+    text-align: center;
+    width: 100%; /* 제목이 그리드 너비를 차지하도록 */
+  }
+
+  // test
+  .white {
+    background-color: inherit;
+    height: 100px;
+    width: 100vw;
   }
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const JjukkumiList__main = [
@@ -157,6 +160,12 @@ const Jjukkumi = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">담터쭈꾸미</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">담터쭈꾸미</div>
+        </div>
       </header>
       <main>
         <MenuSection
@@ -169,8 +178,9 @@ const Jjukkumi = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

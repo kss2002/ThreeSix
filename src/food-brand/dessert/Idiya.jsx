@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 11-1 (리스트 너무 많아서 일단 보류)
 
@@ -181,6 +184,12 @@ const Idiya = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">이디야</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">이디야</div>
+        </div>
       </header>
       <main>
         <MenuSection title="추천" items={IdiyaList__new} />
@@ -206,8 +215,9 @@ const Idiya = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

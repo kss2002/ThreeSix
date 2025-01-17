@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const YogiList__none = [
@@ -16,14 +19,21 @@ const Yogi = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">YOGI YOGURT</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">YOGI YOGURT</div>
+        </div>
       </header>
       <main>
         <MenuSection title="카페, 디저트" items={YogiList__none} />
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

@@ -88,19 +88,18 @@ const MainListPC = () => {
             {categories.map((category) => (
               <div
                 key={category}
-                className={`Mainlist-pc__bar ${
+                className={`Mainlistpc__bar ${
                   currentCategory === category ? 'active' : ''
                 }`}
                 style={{
                   backgroundColor:
                     currentCategory === category
                       ? categoryColors[category]
-                      : '#f0f0f0', // 선택된 카테고리만 색상 변경
+                      : '#f2f2f2', // 선택된 카테고리만 색상 변경
                 }}
               ></div>
             ))}
           </div>
-
           <SliderCompo images={getCategoryImages()} settings={settings} />
         </div>
         <div className="Mainlist-pc__bottom"></div>

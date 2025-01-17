@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
+import SubHeader from '../SubHeader';
 
 // 리스트 선언
 const HaneuljigiList__menu = [
@@ -71,6 +74,12 @@ const Haneuljigi = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">하늘지기(수내닭꼬치)</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">하늘지기(수내닭꼬치)</div>
+        </div>
       </header>
       <main>
         <MenuSection title="꼬치단품메뉴" items={HaneuljigiList__menu} />
@@ -78,8 +87,9 @@ const Haneuljigi = () => {
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };

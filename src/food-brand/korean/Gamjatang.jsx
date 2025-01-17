@@ -1,5 +1,8 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
+import SubHeader from '../SubHeader';
+import MainFooter from '../../main-components/MainFooter';
+import UpDown from '../UpDown';
 
 // 리스트 선언
 const GamjatangList__none = [
@@ -17,14 +20,21 @@ const Gamjatang = () => {
       <header>
         {/* brand head */}
         <div className="detail__head">세상만사 감자탕</div>
+
+        {/* pc */}
+        <SubHeader />
+        <div className="detail-pc__background">
+          <div className="detail-pc__title">세상만사 감자탕</div>
+        </div>
       </header>
       <main>
         <MenuSection title="카페, 디저트" items={GamjatangList__none} />
         <MenuBottom />
       </main>
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <MainFooter />
       </footer>
+      <UpDown />
     </section>
   );
 };
