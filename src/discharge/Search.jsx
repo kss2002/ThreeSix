@@ -1,5 +1,6 @@
 // 검색 기능
 import React, { useEffect, useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const Search = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,8 @@ const Search = () => {
   return (
     <section className={`fixed ${isScrolled ? 'fixed--scrolled' : ''}`}>
       <div className="Search__container">
+        <FaSearch className="FaSearch" />
+
         <input
           className="Search__input"
           type="search"

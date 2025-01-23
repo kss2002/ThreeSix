@@ -9,7 +9,6 @@ const MapComponent = ({ markers }) => {
       style={{
         borderRadius: '16px',
         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-        border: '2px solid black',
         width: '80vw',
         height: '500px',
         margin: '0 auto',

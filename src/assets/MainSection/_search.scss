@@ -39,8 +39,6 @@
     line-height: 20px;
     max-width: 46vw;
 
-    //max-width: 900px;
-
     min-height: 40px;
     padding: 17px 60px; // 내부 여백
     text-align: left;
@@ -63,6 +61,12 @@
     &::placeholder {
       color: #ababab; // 연한 회색으로 placeholder 스타일링
     }
+  }
+
+  .FaSearch {
+    position: relative;
+    left: 46%;
+    color: var(--subGray-color);
   }
 }
 

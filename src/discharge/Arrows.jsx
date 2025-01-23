@@ -1,4 +1,8 @@
 // 커스텀 화살표 컴포넌트
+// 2025년 1/17 디자이너 컨펌으로 전부 주석처리함
+
+/*
+
 import React from 'react';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
@@ -47,3 +51,5 @@ export const PrevArrow = (props) => {
     </div>
   );
 };
+
+*/

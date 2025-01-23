@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import SliderCompo from '../discharge/SliderCompo';
 import CategoryNav from '../discharge/CategoryNav';
 import MapComponent from '../discharge/MapComponent';
-import { NextArrow, PrevArrow } from '../discharge/Arrows';
+/* 화살표 컴포넌트 주석화
+// import { NextArrow, PrevArrow } from '../discharge/Arrows';
+*/
 import {
   PCimagesChina,
   PCimagesDessert,
@@ -30,9 +32,12 @@ const settings = {
   centerPadding: '0px', // 슬라이드 양쪽 여백 제거
   autoplay: true, // 자동 슬라이드
   autoplaySpeed: 3000, // 자동 슬라이드 속도 (ms)
+
+  /* arrow-Del / confirmation-Designer 1/17 
   arrows: true,
   nextArrow: <NextArrow />, // 오른쪽
   prevArrow: <PrevArrow />, // 왼쪽
+  */
 };
 
 const MainListPC = () => {

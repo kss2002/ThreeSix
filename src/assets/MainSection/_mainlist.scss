@@ -120,11 +120,14 @@
     height: 300px;
     width: 300px;
     display: inline-block; /* Link를 블록으로 설정 */
-
     box-shadow: var(--shadow-main);
     border-radius: 24px;
-
     margin: 0 auto;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   // list
@@ -182,7 +185,7 @@
     height: 2px;
     width: 100px;
     background-color: gray;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .Mainlistpc__bar.active {
