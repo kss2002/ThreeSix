@@ -51,9 +51,15 @@ import Manyeo from './food-brand/school/Manyeo';
 import Pastapizza from './food-brand/western/Pastapizza';
 import Dorosi from './food-brand/western/Dorosi';
 
+//
+import ScrollToTop from './ScrollToTop';
+import SubHeader from './food-brand/SubHeader';
+
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <SubHeader />
       <Routes>
         {/* 메인 화면 */}
         <Route path="/" element={<MainView />} />

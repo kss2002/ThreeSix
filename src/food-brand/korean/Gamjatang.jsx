@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -22,7 +21,6 @@ const Gamjatang = () => {
         <div className="detail__head">세상만사 감자탕</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">세상만사 감자탕</div>
         </div>

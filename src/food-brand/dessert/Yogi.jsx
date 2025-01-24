@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -21,7 +20,6 @@ const Yogi = () => {
         <div className="detail__head">YOGI YOGURT</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">YOGI YOGURT</div>
         </div>

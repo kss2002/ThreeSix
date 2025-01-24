@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -198,7 +197,6 @@ const Choegojip = () => {
         <div className="detail__head">최고집해물찜칼국수</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">최고집해물찜칼국수</div>
         </div>

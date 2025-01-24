@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useCategoryStore from '../store/categoryStore';
 import SliderCompo from '../discharge/SliderCompo';
 import CategoryNav from '../discharge/CategoryNav';
 import MapComponent from '../discharge/MapComponent';
 /* 화살표 컴포넌트 주석화
 // import { NextArrow, PrevArrow } from '../discharge/Arrows';
 */
-import {
-  PCimagesChina,
-  PCimagesDessert,
-  PCimagesJapan,
-  PCimagesKorea,
-  PCimagesRest,
-  PCimagesSchool,
-  PCimagesUS,
-} from '../constants/PCdata';
 
 // map marker
 const markers = [
@@ -41,41 +33,10 @@ const settings = {
 };
 
 const MainListPC = () => {
-  const [currentCategory, setCurrentCategory] = useState('중식');
+  const { currentCategory, setCurrentCategory, getCategoryImages } =
+    useCategoryStore();
 
   const categories = ['중식', '일식', '양식', '한식', '분식', '후식', '기타'];
-
-  // 카테고리별 색상 설정
-  const categoryColors = {
-    중식: '#46CC63',
-    일식: '#46CC63',
-    양식: '#46CC63',
-    한식: '#46CC63',
-    분식: '#46CC63',
-    후식: '#46CC63',
-    기타: '#46CC63',
-  };
-
-  const getCategoryImages = () => {
-    switch (currentCategory) {
-      case '중식':
-        return PCimagesChina;
-      case '일식':
-        return PCimagesJapan;
-      case '양식':
-        return PCimagesUS;
-      case '한식':
-        return PCimagesKorea;
-      case '분식':
-        return PCimagesSchool;
-      case '후식':
-        return PCimagesDessert;
-      case '기타':
-        return PCimagesRest;
-      default:
-        return []; // 예외 처리
-    }
-  };
 
   return (
     <main>
@@ -98,14 +59,15 @@ const MainListPC = () => {
                 }`}
                 style={{
                   backgroundColor:
-                    currentCategory === category
-                      ? categoryColors[category]
-                      : '#f2f2f2', // 선택된 카테고리만 색상 변경
+                    currentCategory === category ? '#46CC63' : '#f2f2f2', // 선택된 카테고리만 색상 변경
                 }}
               ></div>
             ))}
           </div>
-          <SliderCompo images={getCategoryImages()} settings={settings} />
+          <SliderCompo
+            images={getCategoryImages(currentCategory)}
+            settings={settings}
+          />
         </div>
         <div className="Mainlist-pc__bottom"></div>
       </section>

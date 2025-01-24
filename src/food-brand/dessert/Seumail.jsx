@@ -2,7 +2,6 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
-import SubHeader from '../SubHeader';
 
 // 리스트 선언
 const SeumailList__coffee = [
@@ -410,7 +409,6 @@ const Seumail = () => {
         <div className="detail__head">스마일하우스</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">스마일하우스</div>
         </div>

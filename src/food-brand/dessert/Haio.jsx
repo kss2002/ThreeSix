@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -225,7 +224,6 @@ const Haio = () => {
         <div className="detail__head">하이오 커피</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">하이오 커피</div>
         </div>

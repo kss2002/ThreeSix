@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -162,7 +161,6 @@ const Jjukkumi = () => {
         <div className="detail__head">담터쭈꾸미</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">담터쭈꾸미</div>
         </div>

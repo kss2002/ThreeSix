@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import UpDown from '../UpDown';
 import MainFooter from '../../main-components/MainFooter';
 
@@ -197,7 +196,6 @@ const Bageul = () => {
         <div className="detail__head">바글바글 베이커리</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">바글바글 베이커리</div>
         </div>

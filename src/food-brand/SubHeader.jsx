@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 // TypeIt 라이브러리
 import TypeIt from 'typeit-react';
 
 const SubHeader = () => {
+  const location = useLocation();
+
+  if (location.pathname === '/') return null;
+
   return (
     <header>
       <div id="mainScreen" className="SubHeader">

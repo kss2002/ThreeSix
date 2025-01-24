@@ -1,7 +1,6 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
-import SubHeader from '../SubHeader';
 import UpDown from '../UpDown';
 
 // 리스트 선언
@@ -296,7 +295,6 @@ const Hongwon = () => {
         <div className="detail__head">홍원</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">홍원</div>
         </div>

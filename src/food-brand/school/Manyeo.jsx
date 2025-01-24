@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import UpDown from '../UpDown';
 import MainFooter from '../../main-components/MainFooter';
 
@@ -191,7 +190,6 @@ const Manyeo = () => {
         <div className="detail__head">마녀 떡볶이</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">마녀 떡볶이</div>
         </div>

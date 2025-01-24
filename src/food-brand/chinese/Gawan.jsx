@@ -1,7 +1,6 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
-import SubHeader from '../SubHeader';
 import UpDown from '../UpDown';
 
 // 리스트 선언
@@ -173,7 +172,6 @@ const Gawan = () => {
         <div className="detail__head">중국관</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">중국관</div>
         </div>

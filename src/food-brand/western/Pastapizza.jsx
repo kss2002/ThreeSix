@@ -1,6 +1,5 @@
 import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
-import SubHeader from '../SubHeader';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 
@@ -383,7 +382,6 @@ const Pastapizza = () => {
         <div className="detail__head">오렌지몽키파스타&마르코죤스피자</div>
 
         {/* pc */}
-        <SubHeader />
         <div className="detail-pc__background">
           <div className="detail-pc__title">
             오렌지몽키파스타&마르코죤스피자
