@@ -53,19 +53,19 @@ export const PCimagesJapan = [
     path: '/byeolmiga',
   },
   {
-    src: require('../assets/img/pc-grid/japan/쇼쿠요쿠.png'),
-    alt: '쇼쿠요쿠',
-    title: '쇼쿠요쿠',
-    num: '전화번호 031-527-2933',
-    time: '영업시간 10:30 ~ 20:30',
-    path: '/torikokoro',
-  },
-  {
     src: require('../assets/img/pc-grid/japan/토리코코로.png'),
     alt: '토리코코로',
     title: '토리코코로',
     num: '전화번호 0507-1321-8794',
     time: '영업시간 10:00 ~ 20:30',
+    path: '/torikokoro',
+  },
+  {
+    src: require('../assets/img/pc-grid/japan/쇼쿠요쿠.png'),
+    alt: '쇼쿠요쿠',
+    title: '쇼쿠요쿠',
+    num: '전화번호 031-527-2933',
+    time: '영업시간 10:30 ~ 20:30',
     path: '/syokuyoku',
   },
   {
