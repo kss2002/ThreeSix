@@ -1,7 +1,36 @@
 // 모바일
 @media (max-width: 500px) {
-  #UpDown {
-    display: none;
+  .Up_btn {
+    position: fixed;
+    bottom: 90px;
+    right: 2%;
+    background-color: #d3f3c9;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 100;
+    opacity: 0.7;
+  }
+
+  .Down_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 2%;
+    background-color: #d3f3c9;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0.7;
+    z-index: 100;
+  }
+
+  .UpDown__icon {
+    height: 50%;
+    width: 50%;
   }
 }
 
