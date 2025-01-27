@@ -8,7 +8,7 @@ import dorosi from '../assets/img/rest-food/w-rest/Dorosi.png';
 const westernList = [
   {
     id: 1,
-    title: '오렌지몽키파스타&\n마르코죤스피자',
+    title: '오렌지몽키&마르코죤스',
     img: pastapizza,
     time: '영업시간 10:30 ~ 22:00',
     phoneNum: '전화번호 0507-1378-0154',

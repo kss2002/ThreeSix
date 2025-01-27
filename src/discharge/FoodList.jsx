@@ -1,6 +1,7 @@
 // food-grid 전역 공통 컴포넌트
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MenuBottom } from './MenuCompo';
 
 const FoodList = ({ title, foodItems }) => {
   return (
@@ -21,12 +22,7 @@ const FoodList = ({ title, foodItems }) => {
               <div className="list__line"></div>
             </div>
           ))}
-
-          <div className="list__bar"></div>
-          <div className="list__back">
-            <Link to="/">다른 식당은 어때요?</Link>
-          </div>
-          <div className="list__cat"></div>
+          <MenuBottom />
         </div>
 
         <div className="list__caution">
@@ -38,9 +34,15 @@ const FoodList = ({ title, foodItems }) => {
 
         <div className="desc">
           메뉴 항목과 가격은 <br /> 각 매장의 사정에 따라 기재된 내용과 <br />
-          다를 수 있음을 알려드립니다. <br /> 또한 영업 시간이 다를 수도 있으며,
-          매장 자체가 쉬는 곳도 존재할 수 있습니다. <br />
-          감사합니다.😊
+          다를 수 있음을 알려드립니다. <br />
+          <br /> 또한 영업 시간이 다를 수도 있으며, <br />
+          매장 자체가 쉬는 곳도 존재할 수 <br /> 있습니다. <br />
+          <br />
+          관련된 사항은 가게에 문의하거나 <br />
+          카카오톡 문의하기를 이용해주세요.
+          <br />
+          <br />
+          감사합니다.
         </div>
       </main>
 
