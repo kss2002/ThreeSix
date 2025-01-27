@@ -87,15 +87,11 @@
   // slick
   .slick-slider {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-bottom: 20px;
-  }
-
-  .slick-prev::before,
-  .slick-next::before {
-    display: none; /* 기본 화살표 제거 */
+    padding-bottom: 60px;
   }
 
   .slider__title {

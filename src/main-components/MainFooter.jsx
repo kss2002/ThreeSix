@@ -15,7 +15,7 @@ const MainFooter = () => {
           </p>
           <p className="Mainfooter__title">유니브 삼육대 1팀</p>
           <h6 className="Mainfooter__update">
-            Copyright &copy; 업데이트:2025/01/26
+            Copyright &copy; 업데이트:2025/01/27
           </h6>
         </div>
       </footer>

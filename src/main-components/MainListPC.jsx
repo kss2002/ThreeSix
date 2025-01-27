@@ -3,9 +3,6 @@ import useCategoryStore from '../store/categoryStore';
 import SliderCompo from '../discharge/SliderCompo';
 import CategoryNav from '../discharge/CategoryNav';
 import MapComponent from '../discharge/MapComponent';
-/* 화살표 컴포넌트 주석화
-// import { NextArrow, PrevArrow } from '../discharge/Arrows';
-*/
 
 // map marker
 const markers = [
@@ -15,21 +12,11 @@ const markers = [
 ];
 
 const settings = {
-  dots: true, // 슬라이드 하단에 점 표시
   infinite: true, // 무한 루프
   speed: 500, // 슬라이드 전환 속도 (ms)
   slidesToShow: 3, // 한 번에 보여줄 슬라이드 개수
-  slidesToScroll: 1, // 한 번에 스크롤할 슬라이드 개수
-  centerMode: true, // 현재 컨텐츠 가운데 정렬
-  centerPadding: '0px', // 슬라이드 양쪽 여백 제거
   autoplay: true, // 자동 슬라이드
   autoplaySpeed: 3000, // 자동 슬라이드 속도 (ms)
-
-  /* arrow-Del / confirmation-Designer 1/17 
-  arrows: true,
-  nextArrow: <NextArrow />, // 오른쪽
-  prevArrow: <PrevArrow />, // 왼쪽
-  */
 };
 
 const MainListPC = () => {
@@ -39,8 +26,8 @@ const MainListPC = () => {
   const categories = ['중식', '일식', '양식', '한식', '분식', '후식', '기타'];
 
   return (
-    <main>
-      <section id="restaurant" className="Mainlist-pc">
+    <main id="restaurant">
+      <section className="Mainlist-pc">
         <div className="Mainlist-pc__top">
           <p className="Mainlist-pc__mainTitle">
             삼육대 후문 식당을 찾아보세요!
