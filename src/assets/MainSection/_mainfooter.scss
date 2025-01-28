@@ -62,3 +62,39 @@
     color: var(--subSilver-color);
   }
 }
+
+// 태블릿 사이즈
+@media (min-width: 500px) and (max-width: 992px) {
+  .Mainfooter__bottom {
+    display: none;
+  }
+
+  .MainFooter-pc {
+    background-color: #d3f3c9;
+    width: 100vw;
+    height: 200px;
+
+    box-shadow: var(--shadow-main);
+  }
+
+  .Mainfooter__text {
+    color: #5fd33a;
+    text-align: center;
+    font-family: 'threesix-light';
+    font-size: 24px;
+    padding-top: 20px;
+  }
+
+  .Mainfooter__title {
+    color: #5fd33a;
+    text-align: center;
+    font-family: 'threesix-regular';
+    font-size: 32px;
+    padding-top: 10px;
+  }
+
+  .Mainfooter__update {
+    margin-left: 10px;
+    color: var(--subSilver-color);
+  }
+}

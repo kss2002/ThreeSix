@@ -34,21 +34,64 @@
 // 태블릿 사이즈
 @media (min-width: 500px) and (max-width: 992px) {
   .Mainheader {
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 42px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
     font-family: 'threesix-regular';
-    font-size: 24px;
-    color: var(--white-color);
+    font-size: 32px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+
+    border-bottom: 1px solid var(--threesixPC-color);
   }
 
-  .Mainheader__title {
+  .Mainheader__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80px;
+    margin-right: 100px;
+
+    font-size: 24px;
+
+    :hover {
+      color: var(--threesix-color);
+    }
+  }
+
+  .Mainheader__background-pc {
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    height: 32rem;
     margin: 0 auto;
-    text-align: center;
-    margin-top: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MainHeader__title-pc {
     font-family: 'threesix-light';
-    font-size: 16x;
-    color: var(--white-color);
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .Mainheader__img {
+    display: none;
+  }
+
+  .Mainheader__title-mobile {
+    display: none;
   }
 }
 

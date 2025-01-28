@@ -1,5 +1,9 @@
 // 모바일
 @media (max-width: 500px) {
+  #YOUTUBE {
+    display: none;
+  }
+
   .Maintro__background {
     display: none;
   }
@@ -80,6 +84,10 @@
 
 // pc
 @media (min-width: 993px) {
+  #YOUTUBE {
+    display: none;
+  }
+
   .Maintro__background {
     height: 400px;
 
@@ -195,5 +203,45 @@
 
   .item8 {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
+  }
+}
+
+// 태블릿 사이즈
+@media (min-width: 500px) and (max-width: 992px) {
+  .Mainintro__text {
+    font-family: 'threesix-regular';
+    font-size: 30px;
+    text-align: center;
+    margin-top: 180px;
+  }
+
+  .wrapper-mobile {
+    display: none;
+  }
+
+  .intro-beta {
+    display: none;
+  }
+
+  .PC-ani {
+    display: none;
+  }
+
+  .youtube-top {
+    height: 800px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      180deg,
+      rgba(165, 255, 133, 0.40304043980873594) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .youtube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 20px;
   }
 }

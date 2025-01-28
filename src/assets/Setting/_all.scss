@@ -8,19 +8,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-
-  //background-repeat: no-repeat;
-  //background-position: center;
 }
 
 @media (max-width: 500px) {
   body {
     background-color: var(--threesix-color);
-    /*
-    메인 백그라운드 이미지
-    background-image: url(../img/back.png);
-    background-size: 100%;
-    */
   }
 }
 

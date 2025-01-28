@@ -9,6 +9,8 @@ import port06 from '../assets/img/Animation/port06.png';
 import port07 from '../assets/img/Animation/port07.png';
 import port08 from '../assets/img/Animation/port08.png';
 
+import YouTube from 'react-youtube';
+
 const wrapper__images = [
   { src: port01, alt: '사진 1' },
   { src: port02, alt: '사진 2' },
@@ -61,11 +63,29 @@ const ImageWrapperPC = () => (
   </main>
 );
 
+const YouTubeplayer = () => {
+  return (
+    <main id="YOUTUBE">
+      <div className="youtube-top">
+        <YouTube
+          className="youtube"
+          videoId="FllRs5CMnHc"
+          opts={{
+            width: '740px',
+            height: '600px',
+          }}
+        />
+      </div>
+    </main>
+  );
+};
+
 const MainIntro = () => {
   return (
     <section>
       <ImageWrapperMobile className="wrapper-mobile" />
       <ImageWrapperPC />
+      <YouTubeplayer />
     </section>
   );
 };

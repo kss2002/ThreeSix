@@ -183,3 +183,51 @@
     width: 60%;
   }
 }
+
+// 태블릿 사이즈
+@media (min-width: 500px) and (max-width: 992px) {
+  .Maincontact-mobile {
+    display: none;
+  }
+
+  .googleform {
+    position: fixed;
+    bottom: 210px;
+    right: 20px;
+    background-color: #d4c2f3;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .kakaoTalkfrom {
+    position: fixed;
+    bottom: 140px;
+    right: 20px;
+    background-color: #fae100;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .upArrow {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #d3f3c9;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .MainContact__icon {
+    height: 60%;
+    width: 60%;
+  }
+}
