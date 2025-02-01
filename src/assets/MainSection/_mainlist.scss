@@ -214,7 +214,7 @@
     font-family: 'threesix-regular';
     font-size: 36px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
 
     &:hover {
       color: var(--threesixPC-color);
@@ -232,7 +232,7 @@
 }
 
 // 태블릿 사이즈
-@media (min-width: 500px) and (max-width: 992px) {
+@media (min-width: 501px) and (max-width: 992px) {
   .Mainlist-mobile {
     display: none;
   }
@@ -260,7 +260,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 60px;
     gap: 40px;
     font-family: 'threesix-light';
@@ -281,7 +281,7 @@
 
   .Mainlistpc__bar {
     height: 2px;
-    width: 100px;
+    width: 80px;
     background-color: gray;
     transition: background-color 0.3s ease-in-out;
   }
@@ -328,19 +328,19 @@
   }
 
   .slider__title {
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
     font-family: 'threesix-regular';
   }
 
   .slider__num {
-    font-size: 10px;
+    font-size: 9px;
     text-align: center;
     font-family: 'threesix-light';
   }
 
   .slider__time {
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     font-family: 'threesix-light';
     margin-top: 2px;

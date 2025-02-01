@@ -34,8 +34,41 @@
   }
 }
 
-//pc
-@media (min-width: 993px) {
+//pc 2025/2/2 (1260 추가 반응형)
+@media (min-width: 1261px) {
+  .Up_btn {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background-color: #d3f3c9;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 100;
+  }
+
+  .Down_btn {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background-color: #d3f3c9;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 100;
+  }
+
+  .UpDown__icon {
+    height: 60%;
+    width: 60%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1260px) {
   .Up_btn {
     position: fixed;
     bottom: 150px;

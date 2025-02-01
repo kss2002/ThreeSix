@@ -43,3 +43,28 @@
     border-bottom: 1px solid var(--threesixPC-color);
   }
 }
+
+// 태블릿 사이즈
+@media (min-width: 501px) and (max-width: 1260px) {
+  .SubHeader {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    font-family: 'threesix-regular';
+    font-size: 32px;
+    background: rgb(165, 255, 133);
+    background: linear-gradient(
+      140deg,
+      rgba(165, 255, 133, 0.4) 0%,
+      rgba(255, 255, 255, 1) 60%
+    );
+
+    border-bottom: 1px solid var(--threesixPC-color);
+  }
+
+  .detail__head {
+    display: none;
+  }
+}

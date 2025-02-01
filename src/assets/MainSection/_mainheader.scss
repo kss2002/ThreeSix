@@ -31,8 +31,8 @@
   }
 }
 
-// 태블릿 사이즈
-@media (min-width: 500px) and (max-width: 992px) {
+// 태블릿 사이즈 2025/2/2 (pro 크기 이상)
+@media (min-width: 501px) and (max-width: 1260px) {
   .Mainheader {
     height: 96px;
     display: flex;
@@ -95,8 +95,8 @@
   }
 }
 
-// pc 사이즈
-@media (min-width: 993px) {
+// pc 사이즈 2025/2/2
+@media (min-width: 1261px) {
   .Mainheader__title-mobile {
     display: none;
   }

@@ -1,6 +1,6 @@
 // 모바일
 @media (max-width: 500px) {
-  #YOUTUBE {
+  .WrapperTablet {
     display: none;
   }
 
@@ -84,7 +84,7 @@
 
 // pc
 @media (min-width: 993px) {
-  #YOUTUBE {
+  .WrapperTablet {
     display: none;
   }
 
@@ -207,7 +207,7 @@
 }
 
 // 태블릿 사이즈
-@media (min-width: 500px) and (max-width: 992px) {
+@media (min-width: 501px) and (max-width: 992px) {
   .Mainintro__text {
     font-family: 'threesix-regular';
     font-size: 30px;
@@ -224,24 +224,27 @@
   }
 
   .PC-ani {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 25%;
+    object-fit: contain;
+  }
+
+  .swiperAni {
+    width: 166px;
+    height: 216px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-main);
+    transition-timing-function: linear;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .itemLeft,
+  .itemRight {
     display: none;
-  }
-
-  .youtube-top {
-    height: 800px;
-    background: rgb(165, 255, 133);
-    background: linear-gradient(
-      180deg,
-      rgba(165, 255, 133, 0.40304043980873594) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
-  }
-
-  .youtube {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 20px;
   }
 }

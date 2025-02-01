@@ -9,7 +9,9 @@ import port06 from '../assets/img/Animation/port06.png';
 import port07 from '../assets/img/Animation/port07.png';
 import port08 from '../assets/img/Animation/port08.png';
 
-import YouTube from 'react-youtube';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/scss';
 
 const wrapper__images = [
   { src: port01, alt: '사진 1' },
@@ -48,6 +50,36 @@ const ImageWrapperMobile = ({ className }) => (
   </div>
 );
 
+const ImageWrapperTablet = () => {
+  return (
+    <div className="WrapperTablet">
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 1,
+          disableOnInteraction: false,
+        }}
+        speed={1000}
+        slidesPerView={4}
+        spaceBetween={60}
+        loop={true}
+      >
+        {wrapper__images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="swiperAni">
+              <img
+                className="PC-ani"
+                src={image.src}
+                alt={image.alt || `Slide ${index}`}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
 const ImageWrapperPC = () => (
   <main className="Maintro__background">
     <p className="Mainintro__text">
@@ -63,29 +95,12 @@ const ImageWrapperPC = () => (
   </main>
 );
 
-const YouTubeplayer = () => {
-  return (
-    <main id="YOUTUBE">
-      <div className="youtube-top">
-        <YouTube
-          className="youtube"
-          videoId="FllRs5CMnHc"
-          opts={{
-            width: '740px',
-            height: '600px',
-          }}
-        />
-      </div>
-    </main>
-  );
-};
-
 const MainIntro = () => {
   return (
     <section>
       <ImageWrapperMobile className="wrapper-mobile" />
       <ImageWrapperPC />
-      <YouTubeplayer />
+      <ImageWrapperTablet />
     </section>
   );
 };

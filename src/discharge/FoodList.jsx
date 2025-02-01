@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MenuBottom } from './MenuCompo';
+import UpDown from '../food-brand/UpDown';
 
 const FoodList = ({ title, foodItems }) => {
   return (
@@ -47,10 +48,13 @@ const FoodList = ({ title, foodItems }) => {
       </main>
 
       <footer>
-        <div className="list__foot">하루를 맛있게</div>
+        <div id="MainFooter-id" className="list__foot">
+          하루를 맛있게
+        </div>
+        <UpDown />
       </footer>
     </section>
   );
 };
-
+// UpDown add 2025/2/2
 export default FoodList;
