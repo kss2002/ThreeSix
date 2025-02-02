@@ -83,7 +83,7 @@
 }
 
 //pc
-@media (min-width: 993px) {
+@media (min-width: 1025px) {
   // slick
   .slick-slider {
     display: flex;
@@ -232,7 +232,7 @@
 }
 
 // 태블릿 사이즈
-@media (min-width: 501px) and (max-width: 992px) {
+@media (min-width: 501px) and (max-width: 1024px) {
   .Mainlist-mobile {
     display: none;
   }
@@ -281,7 +281,7 @@
 
   .Mainlistpc__bar {
     height: 2px;
-    width: 80px;
+    width: 88px;
     background-color: gray;
     transition: background-color 0.3s ease-in-out;
   }

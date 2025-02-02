@@ -24,22 +24,6 @@ const wrapper__images = [
   { src: port08, alt: '사진 8' },
 ];
 
-const ImageGrid = ({ className, reverse }) => {
-  const images = reverse ? [...wrapper__images].reverse() : wrapper__images;
-  return (
-    <div className={className}>
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`item${reverse ? 'Right' : 'Left'} item${index + 1}`}
-        >
-          <img className="PC-ani" src={image.src} alt={image.alt} />
-        </div>
-      ))}
-    </div>
-  );
-};
-
 const ImageWrapperMobile = ({ className }) => (
   <div className={className}>
     {wrapper__images.map((image, index) => (
@@ -52,45 +36,124 @@ const ImageWrapperMobile = ({ className }) => (
 
 const ImageWrapperTablet = () => {
   return (
-    <div className="WrapperTablet">
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 1,
-          disableOnInteraction: false,
-        }}
-        speed={1000}
-        slidesPerView={4}
-        spaceBetween={60}
-        loop={true}
-      >
-        {wrapper__images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="swiperAni">
-              <img
-                className="PC-ani"
-                src={image.src}
-                alt={image.alt || `Slide ${index}`}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <main id="WrapperTablet-id" className="Maintro__background">
+      <p className="Mainintro__text">
+        이젠 먹고 싶은 메뉴를 쉽게 찾아보며
+        <br />
+        시간을 아껴 보세요!
+      </p>
+      <div className="WrapperTablet" dir="ltr">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0, //딜레이
+            disableOnInteraction: false, //슬라이드 만지면 슬라이드가 멈추는 기능
+          }}
+          speed={2000}
+          slidesPerView={3}
+          spaceBetween={60}
+          loop={true}
+        >
+          {wrapper__images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="swiperAni">
+                <img
+                  className="PC-ani"
+                  src={image.src}
+                  alt={image.alt || `Slide ${index}`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="wrapper-bottom" dir="rtl">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false, //슬라이드 만지면 슬라이드가 멈추는 기능
+          }}
+          speed={2000}
+          slidesPerView={3}
+          spaceBetween={60}
+          loop={true}
+        >
+          {wrapper__images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="swiperAni">
+                <img
+                  className="PC-ani-rtl"
+                  src={image.src}
+                  alt={image.alt || `Slide ${index}`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </main>
   );
 };
 
 const ImageWrapperPC = () => (
-  <main className="Maintro__background">
+  <main id="WrapperPC-id" className="Maintro__background">
     <p className="Mainintro__text">
       이젠 먹고 싶은 메뉴를 쉽게 찾아보며
       <br />
       시간을 아껴 보세요!
     </p>
     <section>
-      <ImageGrid className="wrapper-pc" reverse={false} />
-      <div className="intro-beta"></div>
-      <ImageGrid className="wrapper-bottom" reverse={true} />
+      <div dir="ltr">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0, //딜레이
+            disableOnInteraction: false, //슬라이드 만지면 슬라이드가 멈추는 기능
+          }}
+          speed={2000}
+          slidesPerView={5}
+          spaceBetween={60}
+          loop={true}
+        >
+          {wrapper__images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="swiperAni">
+                <img
+                  className="PC-ani"
+                  src={image.src}
+                  alt={image.alt || `Slide ${index}`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="wrapper-bottom" dir="rtl">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false, //슬라이드 만지면 슬라이드가 멈추는 기능
+          }}
+          speed={2000}
+          slidesPerView={5}
+          spaceBetween={60}
+          loop={true}
+        >
+          {wrapper__images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="swiperAni">
+                <img
+                  className="PC-ani-rtl"
+                  src={image.src}
+                  alt={image.alt || `Slide ${index}`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   </main>
 );
