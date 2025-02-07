@@ -7,19 +7,19 @@
 
 ## [삼식아 사이트 Link](https://samsika.site/)
 
-### Contributing
+## Contributing
 
 커뮤니티의 모든 분들의 기여를 환영합니다.
 
-### License
+## License
 
 MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/kss2002/ThreeSix/blob/main/LICENSE)를 참고하세요.
 
-### TiemLine
+## TiemLine
 
 2024 more than
 
-### Contributor
+## Contributor
 
 - Designer 1명
 
