@@ -1,16 +1,31 @@
-### 삼육대 아이디어톤
+![Image](https://github.com/user-attachments/assets/69777d5d-9e90-4710-87c4-8ac42d6453ba)
 
+# 삼육대 IDEA Tone
+
+<b>
 삼육대 근처 밥집이나 카페의
-메뉴 및 가격을 알려주는 프로덕트입니다.
-가장 처음에 홈뷰가 나오고 이후 버튼을 누르면
-메인 뷰가 나오도록 설계가 되어있습니다.
+메뉴 및 가격을 알려주는 프로덕트입니다.</b>
 
-# 핵심 기능을 먼저 구현하는 것이 목표입니다 ^^
+## [삼식아 사이트 Link](https://samsika.site/)
 
-타임라인: 2024 하반기
+---
 
-- 디자이너 1명
+#### Contributing
 
-- 백엔드 1명
+커뮤니티의 모든 분들의 기여를 환영합니다.
 
-- 프론트엔드 1명
+#### License
+
+MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/kss2002/ThreeSix/blob/main/LICENSE)를 참고하세요.
+
+#### TiemLine
+
+2024 more than
+
+#### Contributor
+
+- Designer 1명
+
+- BE-Developer 1명
+
+- FE-Developer 1명
