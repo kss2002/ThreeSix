@@ -26,3 +26,7 @@ MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/k
 - BE-Developer 1명
 
 - FE-Developer 1명
+
+## Tech
+
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
