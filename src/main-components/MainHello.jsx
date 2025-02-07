@@ -1,5 +1,5 @@
 import React from 'react';
-import iPhone from '../assets/img/iPhone.png';
+import iPhone from '../assets/img/iPhone.webp';
 
 const MainHello = () => {
   return (

@@ -1,19 +1,26 @@
-// food-grid 전역 공통 컴포넌트
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuBottom } from './MenuCompo';
 import UpDown from '../food-brand/UpDown';
+// food-grid 전역 공통 컴포넌트
 
-const FoodList = ({ title, foodItems }) => {
+const FoodList = memo(({ title, foodItems }) => {
+  const memoizedItems = useMemo(() => foodItems, [foodItems]);
+
   return (
     <section>
       <header className="list__head">{title}</header>
       <main>
         <div className="list__main">
-          {foodItems.map((item) => (
+          {memoizedItems.map((item) => (
             <div key={item.id}>
               <Link className="list__brand" to={item.path}>
-                <img className="list__img" src={item.img} alt={item.title} />
+                <img
+                  className="list__img"
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                />
                 <div className="list__col">
                   <div className="list__name">{item.title}</div>
                   <div className="list__businessHours">{item.time}</div>
@@ -55,6 +62,6 @@ const FoodList = ({ title, foodItems }) => {
       </footer>
     </section>
   );
-};
+});
 // UpDown add 2025/2/2
 export default FoodList;

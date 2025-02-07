@@ -1,6 +1,11 @@
 import React from 'react';
 
 const MainFooter = () => {
+  // YYYY-MM-DD 형식 / 동적 업데이트 수정
+  const today = new Date();
+  today.setHours(today.getHours() + 9); // UTC -> KST 변환
+  const formattedDate = today.toISOString().split('T')[0];
+
   return (
     <>
       <footer id="MainFooter-id">
@@ -15,7 +20,7 @@ const MainFooter = () => {
           </p>
           <p className="Mainfooter__title">삼육대 유니브 1팀</p>
           <h6 className="Mainfooter__update">
-            Copyright &copy; 업데이트:2025/02/02
+            Copyright &copy; 업데이트: {formattedDate}
           </h6>
         </div>
       </footer>
