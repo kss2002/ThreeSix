@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -6,8 +6,11 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
 const SliderCompo = ({ images, settings }) => {
-  if (!images || images.length === 0) {
-    return <div>이미지가 어디간거야??</div>; // 이미지가 없을 경우 메시지 출력
+  // 이미지 배열을 useMemo로 캐싱하여 불필요한 재렌더링 방지
+  const swiperMemoizedImages = useMemo(() => images || [], [images]);
+
+  if (!swiperMemoizedImages.length) {
+    return <div>이미지가 없음</div>; // 이미지가 없을 경우 메시지 출력
   }
 
   return (
@@ -28,7 +31,7 @@ const SliderCompo = ({ images, settings }) => {
         }
         spaceBetween={20}
       >
-        {images.map((image, index) => (
+        {swiperMemoizedImages.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="slick-slider">
               <p className="slider__title">{image.title}</p>
@@ -40,6 +43,7 @@ const SliderCompo = ({ images, settings }) => {
                     className="slider-img"
                     src={image.src}
                     alt={image.alt || `Slide ${index}`}
+                    loading="lazy"
                   />
                 </Link>
               </div>

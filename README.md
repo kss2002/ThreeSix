@@ -1,15 +1,15 @@
 ![Image](https://github.com/user-attachments/assets/69777d5d-9e90-4710-87c4-8ac42d6453ba)
 
-# 삼육대 IDEA Tone
+# 삼육대 IDEA Tone ❤️
 
 <b>
-삼육대 근처 밥집이나 카페의 메뉴 및 가격을 알려주는 프로덕트입니다.</b>
+<mark>삼육대</mark> 근처 밥집이나 카페의 메뉴 및 가격을 알려주는 프로덕트입니다.</b>
 
-## [삼식아 사이트 Link](https://samsika.site/)
+#### [삼식아 사이트 Link](https://samsika.site/)
 
 ## Contributing
 
-커뮤니티의 모든 분들의 기여를 환영합니다.
+커뮤니티의 모든 분들의 기여를 환영합니다. 😊
 
 ## License
 
@@ -29,4 +29,18 @@ MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/k
 
 ## Tech
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
+- React
+
+- React Router
+
+- React icon
+
+- React Naver Map
+
+- React slick
+
+- swiper
+
+- Sass
+
+- zustand
