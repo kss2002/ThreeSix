@@ -8,6 +8,7 @@ import Search from '../discharge/Search';
 import MainListMobile from '../main-components/MainListMobile';
 import MainListPC from '../main-components/MainListPC';
 import MainHello from '../main-components/MainHello';
+import SearchMobile from '../discharge/SearchMobile';
 
 const MainView = () => {
   return (
@@ -16,6 +17,7 @@ const MainView = () => {
       <Main>
         <MainHello />
         <Search />
+        <SearchMobile />
         <MainIntro />
         <MainListMobile />
         <MainListPC />

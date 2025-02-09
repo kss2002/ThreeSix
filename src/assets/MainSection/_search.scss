@@ -1,5 +1,9 @@
 // pc
 @media (min-width: 993px) {
+  .Search__mobile {
+    display: none;
+  }
+
   .fixed {
     position: fixed;
     top: 0;
@@ -102,10 +106,81 @@
   .fixed {
     display: none;
   }
+
+  .Search__container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: inherit;
+  }
+
+  .Search__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--threesixPC-color); // 초록 테두리
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: var(--black-color);
+    display: inline-flex;
+    font-size: 16px;
+    font-family: 'threesix-light';
+    line-height: 20px;
+    width: 90vw;
+
+    padding: 16px 30px; // 내부 여백
+    text-align: left;
+
+    border: 2px solid var(--threesixPC-color);
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(46, 139, 87, 0.5); // 초록색 빛나는 효과
+    }
+
+    &::placeholder {
+      color: #ababab; // 연한 회색으로 placeholder 스타일링
+    }
+  }
+
+  .FaSearch {
+    position: relative;
+    left: 84%;
+    color: var(--threesix-color);
+  }
+
+  .Search__results {
+    background-color: var(--white-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 220px;
+
+    box-shadow: var(--shadow-main);
+    z-index: 100;
+  }
+
+  .Search__result-item {
+    text-align: start;
+    margin-left: 24px;
+    font-family: 'threesix-light';
+    cursor: pointer;
+  }
+
+  .Search__Exce {
+    text-align: center;
+    font-family: 'threesix-light';
+  }
 }
 
 // 태블릿 사이즈
 @media (min-width: 500px) and (max-width: 992px) {
+  .Search__mobile {
+    display: none;
+  }
+
   .fixed {
     position: fixed;
     top: 0;
