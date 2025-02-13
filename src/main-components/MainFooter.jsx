@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
+// GitHube API / fetch
 const MainFooter = () => {
-  // YYYY-MM-DD 형식 / 동적 업데이트 수정
-  const today = new Date();
-  today.setHours(today.getHours() + 9); // UTC -> KST 변환
-  const formattedDate = today.toISOString().split('T')[0];
+  const [lastUpdated, setLastUpdated] = useState('');
+
+  useEffect(() => {
+    const fetchLastPushDate = async () => {
+      try {
+        const response = await fetch(
+          'https://api.github.com/repos/kss2002/ThreeSix/commits'
+        );
+        const data = await response.json();
+
+        if (data.length > 0) {
+          const lastCommitDate = new Date(data[0].commit.committer.date);
+          lastCommitDate.setHours(lastCommitDate.getHours() + 9); // UTC → KST 변환
+          const formattedDate = lastCommitDate.toISOString().split('T')[0];
+
+          setLastUpdated(formattedDate);
+        }
+      } catch (error) {
+        console.error('GitHub 데이터를 불러오는 중 오류 발생:', error);
+        setLastUpdated('업데이트 정보를 가져올 수 없습니다.');
+      }
+    };
+
+    fetchLastPushDate();
+  }, []);
 
   return (
     <>
@@ -20,7 +42,7 @@ const MainFooter = () => {
           </p>
           <p className="Mainfooter__title">삼육대 유니브 1팀</p>
           <h6 className="Mainfooter__update">
-            Copyright &copy; 업데이트: {formattedDate}
+            Copyright &copy; 업데이트: {lastUpdated}
           </h6>
         </div>
       </footer>
