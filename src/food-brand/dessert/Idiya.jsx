@@ -6,175 +6,411 @@ import UpDown from '../UpDown';
 // 11-1 (리스트 너무 많아서 일단 보류)
 
 // 리스트 선언
-const IdiyaList__new = [
+const IdiyaList__coffee = [
   {
-    name: '(L)ICED 미니펄 밀크티',
-    price: '5,300원',
+    name: '아메리카노',
+    price: '3,200원',
   },
   {
-    name: '(L)ICED 미니펄 망고연유라떼',
+    name: '(EX)아메리카노',
+    price: '4,200원',
+  },
+  {
+    name: '카페 라떼',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)카페 라떼',
+    price: '5,400원',
+  },
+  {
+    name: '카푸치노',
+    price: '4,200원',
+  },
+  {
+    name: '바닐라 라떼',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)바닐라 라떼',
     price: '5,700원',
   },
   {
-    name: '(L)미니펄 연유커피쉐이크',
-    price: '5,900원',
+    name: '연유 카페 라떼',
+    price: '4,500원',
   },
   {
-    name: '(L)미니펄 딸기연유플랫치노',
-    price: '5,900원',
+    name: '(EX)연유 카페 라떼',
+    price: '5,700원',
   },
   {
-    name: '(EX)ICED 시그니처 라떼',
-    price: '5,900원',
+    name: '카라멜 마끼야또',
+    price: '4,500원',
   },
   {
-    name: '(EX)ICED 민트 모히또 라떼',
-    price: '6,100원',
+    name: '(EX)카라멜 마끼야또',
+    price: '5,700원',
+  },
+  {
+    name: '카페 모카',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)카페 모카',
+    price: '5,700원',
+  },
+  {
+    name: '화이트 초콜릿 모카',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)화이트 초콜릿 모카',
+    price: '5,700원',
+  },
+  {
+    name: '넛츠 크림 라떼',
+    price: '4,700원',
+  },
+  {
+    name: '아포카토',
+    price: '4,700원',
+  },
+  {
+    name: '민트 모카',
+    price: '4,900원',
   },
 ];
 
-const IdiyaList__coffee = [
+const IdiyaList__tea = [
   {
-    name: '(L)HOT 카페 아메리카노',
+    name: '스프링 캐모마일',
     price: '3,200원',
   },
   {
-    name: '(L)ICED 카페 아메리카노',
+    name: '(EX)스프링 캐모마일',
+    price: '4,200원',
+  },
+  {
+    name: '샤인 히비스커스',
     price: '3,200원',
   },
   {
-    name: '(EX)HOT 카페 아메리카노',
+    name: '(EX)샤인 히비스커스',
     price: '4,200원',
   },
   {
-    name: '(EX)ICED 카페 아메리카노',
+    name: '퓨어 페퍼민트',
+    price: '3,200원',
+  },
+  {
+    name: '(EX)퓨어 페퍼민트',
     price: '4,200원',
   },
   {
-    name: '(L)HOT 시그니처 라떼',
+    name: '피치 얼그레이',
+    price: '3,200원',
+  },
+  {
+    name: '(EX)피치 얼그레이',
+    price: '4,200원',
+  },
+  {
+    name: '그린 루이보스',
+    price: '3,200원',
+  },
+  {
+    name: '(EX)그린 루이보스',
+    price: '4,200원',
+  },
+  {
+    name: '쌍화차',
+    price: '4,200원',
+  },
+  {
+    name: '생강차',
+    price: '4,200원',
+  },
+  {
+    name: '밀크티',
+    price: '4,200원',
+  },
+  {
+    name: '살얼음 식혜',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)살얼음 식혜',
+    price: '5,200원',
+  },
+  {
+    name: '버블 크림 밀크티',
     price: '4,700원',
   },
+];
+
+const IdiyaList__coldbrew = [
   {
-    name: '(L)ICED 시그니처 라떼',
-    price: '4,700원',
-  },
-  {
-    name: '(EX)HOT 시그니처 라떼',
-    price: '5,900원',
-  },
-  {
-    name: '(EX)ICED 시그니처 라떼',
-    price: '5,900원',
-  },
-  {
-    name: '(L)HOT 민트 모히또 라떼',
-    price: '4,900원',
-  },
-  {
-    name: '(L)ICED 민트 모히또 라떼',
-    price: '4,900원',
-  },
-  {
-    name: '(EX)HOT 민트 모히또 라떼',
-    price: '6,100원',
-  },
-  {
-    name: '(EX)ICED 민트 모히또 라떼',
-    price: '6,100원',
-  },
-  {
-    name: '(L)HOT 연유 카페 라떼',
-    price: '4,500원',
-  },
-  {
-    name: '(L)ICED 연유 카페 라떼',
-    price: '4,500원',
-  },
-  {
-    name: '(EX)HOT 연유 카페 라떼',
-    price: '5,700원',
-  },
-  {
-    name: '(EX)ICED 연유 카페 라떼',
-    price: '5,700원',
-  },
-  {
-    name: '(L)ICED 달달커피',
-    price: '2,900원',
-  },
-  {
-    name: '(EX)ICED 달달커피',
+    name: '콜드브루',
     price: '3,900원',
   },
   {
-    name: '(L)HOT 카페 라떼',
+    name: '(EX)콜드브루',
+    price: '4,900원',
+  },
+  {
+    name: '콜드브루 니트로',
     price: '4,200원',
   },
   {
-    name: '(L)ICED 카페 라떼',
+    name: '흑당 콜드브루',
     price: '4,200원',
   },
   {
-    name: '(EX)HOT 카페 라떼',
+    name: '(EX)흑당 콜드브루',
     price: '5,400원',
   },
   {
-    name: '(EX)ICED 카페 라떼',
-    price: '5,400원',
-  },
-  {
-    name: '(L)HOT 카페 모카',
+    name: '콜드브루 라떼',
     price: '4,500원',
   },
   {
-    name: '(L)ICED 카페 모카',
-    price: '4,500원',
-  },
-  {
-    name: '(EX)HOT 카페 모카',
+    name: '(EX)콜드브루 라떼',
     price: '5,700원',
   },
   {
-    name: '(EX)ICED 카페 모카',
-    price: '5,4700원',
+    name: '연유 콜드브루',
+    price: '4,700원',
+  },
+  {
+    name: '(EX)연유 콜드브루',
+    price: '5,900원',
+  },
+  {
+    name: '콜드브루 화이트 비엔나',
+    price: '4,900원',
   },
 ];
 
-const IdiyaList__noncoffee = [];
+const IdiyaList__milkbeverage = [
+  {
+    name: '흑당 라떼',
+    price: '3,700원',
+  },
+  {
+    name: '(EX)흑당 라떼',
+    price: '4,900원',
+  },
+  {
+    name: '달고나 라떼',
+    price: '3,700원',
+  },
+  {
+    name: '(EX)달고나 라떼',
+    price: '4,900원',
+  },
+  {
+    name: '12곡 라떼',
+    price: '3,700원',
+  },
+  {
+    name: '초콜릿 라떼',
+    price: '3,900원',
+  },
+  {
+    name: '(EX)초콜릿 라떼',
+    price: '5,100원',
+  },
+  {
+    name: '녹차 라떼',
+    price: '3,900원',
+  },
+  {
+    name: '(EX)녹차 라떼',
+    price: '5,100원',
+  },
+  {
+    name: '토피넛 라떼',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)토피넛 라떼',
+    price: '5,400원',
+  },
+  {
+    name: '민트 초콜릿 라떼',
+    price: '4,200원',
+  },
+  {
+    name: '고구마 라떼',
+    price: '4,200원',
+  },
+  {
+    name: '버블 흑당 라떼',
+    price: '4,700원',
+  },
+  {
+    name: '(EX)버블 흑당 라떼',
+    price: '5,900원',
+  },
+];
 
-const IdiyaList__collabo = [];
+const IdiyaList__flatcino = [
+  {
+    name: '꿀복숭아',
+    price: '3,900원',
+  },
+  {
+    name: '망고',
+    price: '3,900원',
+  },
+  {
+    name: '초콜릿 칩',
+    price: '4,500원',
+  },
+  {
+    name: '민트 초콜릿 칩',
+    price: '4,500원',
+  },
+  {
+    name: '플레인 요거트',
+    price: '4,500원',
+  },
+  {
+    name: '딸기 요거트',
+    price: '4,700원',
+  },
+  {
+    name: '블루베리 요거트',
+    price: '4,700원',
+  },
+];
 
-const IdiyaList__ice = [];
+const IdiyaList__blending = [
+  {
+    name: '복숭아 아이스티',
+    price: '2,900원',
+  },
+  {
+    name: '(EX)복숭아 아이스티',
+    price: '3,900원',
+  },
+  {
+    name: '레몬 아이스티',
+    price: '2,900원',
+  },
+  {
+    name: '(EX)레몬 아이스티',
+    price: '3,900원',
+  },
+  {
+    name: '유자 과일차',
+    price: '4,200원',
+  },
+  {
+    name: '자몽 과일차',
+    price: '4,200원',
+  },
+  {
+    name: '석류 과일차',
+    price: '4,200원',
+  },
+  {
+    name: '유자 피나콜라다',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)유자 피나콜라다',
+    price: '5,100원',
+  },
+  {
+    name: '자몽 네이블오렌지',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)자몽 네이블오렌지',
+    price: '5,100원',
+  },
+  {
+    name: '석류 애플라임',
+    price: '4,500원',
+  },
+  {
+    name: '(EX)석류 애플라임',
+    price: '5,100원',
+  },
+];
 
-const IdiyaList__tea = [];
+const IdiyaList__ade = [
+  {
+    name: '레몬 에이드',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)레몬 에이드',
+    price: '5,200원',
+  },
+  {
+    name: '자몽 에이드',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)자몽 에이드',
+    price: '5,200원',
+  },
+  {
+    name: '청포도 에이드',
+    price: '4,200원',
+  },
+  {
+    name: '(EX)청포도 에이드',
+    price: '5,200원',
+  },
+];
 
-const IdiyaList__bakery = [];
+const IdiyaList__juice = [
+  {
+    name: '홍시 과일주스',
+    price: '4,500원',
+  },
+  {
+    name: '골드키위 과일주스',
+    price: '4,500원',
+  },
+  {
+    name: '딸기 과일주스',
+    price: '4,500원',
+  },
+];
 
-const IdiyaList__dessert = [];
+const IdiyaList__shake = [
+  {
+    name: '오리진 쉐이크',
+    price: '4,700원',
+  },
+  {
+    name: '초코쿠키 쉐이크',
+    price: '4,900원',
+  },
+  {
+    name: '딸기 쉐이크',
+    price: '5,200원',
+  },
+];
 
-const IdiyaList__drink = [];
-
-const IdiyaList__coldbrew = [];
-
-const IdiyaList__bubble = [];
-
-const IdiyaList__flatcino = [];
-
-const IdiyaList__blending = [];
-
-const IdiyaList__ade = [];
-
-const IdiyaList__shake = [];
-
-const IdiyaList__bottle = [];
-
-const IdiyaList__snacks = [];
-
-const IdiyaList__stick = [];
-
-const IdiyaList__md = [];
-
-const IdiyaList__capsule = [];
+const IdiyaList__capsule = [
+  {
+    name: '(캡슐)페르소나 블렌드',
+    price: '4,500원',
+  },
+  {
+    name: '(캡슐)콜롬비아 슈프리모',
+    price: '4,500원',
+  },
+  {
+    name: '(캡슐)에티오피아 리무',
+    price: '4,500원',
+  },
+];
 
 // 메인 컴포넌트
 const Idiya = () => {
@@ -190,25 +426,15 @@ const Idiya = () => {
         </div>
       </header>
       <main>
-        <MenuSection title="추천" items={IdiyaList__new} />
         <MenuSection title="커피" items={IdiyaList__coffee} />
-        <MenuSection title="디카페인" items={IdiyaList__noncoffee} />
-        <MenuSection title="콜라보" items={IdiyaList__collabo} />
-        <MenuSection title="빙수" items={IdiyaList__ice} />
-        <MenuSection title="아이스티" items={IdiyaList__tea} />
-        <MenuSection title="베이커리" items={IdiyaList__bakery} />
-        <MenuSection title="디저트&기타" items={IdiyaList__dessert} />
-        <MenuSection title="음료" items={IdiyaList__drink} />
+        <MenuSection title="티" items={IdiyaList__tea} />
         <MenuSection title="콜드브루" items={IdiyaList__coldbrew} />
-        <MenuSection title="버블티" items={IdiyaList__bubble} />
+        <MenuSection title="밀크 베버리지" items={IdiyaList__milkbeverage} />
         <MenuSection title="플랫치노" items={IdiyaList__flatcino} />
         <MenuSection title="블렌딩티" items={IdiyaList__blending} />
         <MenuSection title="에이드" items={IdiyaList__ade} />
+        <MenuSection title="과일주스" items={IdiyaList__juice} />
         <MenuSection title="쉐이크" items={IdiyaList__shake} />
-        <MenuSection title="병 음료" items={IdiyaList__bottle} />
-        <MenuSection title="스낵" items={IdiyaList__snacks} />
-        <MenuSection title="스틱커피" items={IdiyaList__stick} />
-        <MenuSection title="MD" items={IdiyaList__md} />
         <MenuSection title="캡슐" items={IdiyaList__capsule} />
         <MenuBottom />
       </main>

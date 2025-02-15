@@ -83,6 +83,10 @@
     font-family: 'threesix-light';
     font-size: 20px;
     padding-top: 20px;
+
+    &:hover {
+      color: var(--balck-color);
+    }
   }
 
   .Mainfooter__title {
@@ -91,6 +95,10 @@
     font-family: 'threesix-regular';
     font-size: 30px;
     padding-top: 10px;
+
+    &:hover {
+      color: var(--balck-color);
+    }
   }
 
   .Mainfooter__update {
