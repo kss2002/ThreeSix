@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const GawanList__meal = [
@@ -167,15 +168,7 @@ const GawanList__rest = [
 const Gawan = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">중국관</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">중국관</div>
-        </div>
-      </header>
+      <BrandHeader name="중국관" />
       <main>
         <MenuSection title="식사부" items={GawanList__meal} />
         <MenuSection title="요리부" items={GawanList__cook} />

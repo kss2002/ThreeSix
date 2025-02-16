@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 11-1 (리스트 너무 많아서 일단 보류)
 
@@ -416,15 +417,7 @@ const IdiyaList__capsule = [
 const Idiya = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">이디야</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">이디야</div>
-        </div>
-      </header>
+      <BrandHeader name="이디야" />
       <main>
         <MenuSection title="커피" items={IdiyaList__coffee} />
         <MenuSection title="티" items={IdiyaList__tea} />

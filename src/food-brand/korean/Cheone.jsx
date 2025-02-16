@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const CheoneList__main = [
@@ -95,15 +96,7 @@ const CheoneList__main = [
 const Cheone = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">청와삼대</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">청와삼대</div>
-        </div>
-      </header>
+      <BrandHeader name="청와삼대" />
       <main>
         <MenuSection title="청와삼대 메뉴" items={CheoneList__main} />
         <MenuBottom />

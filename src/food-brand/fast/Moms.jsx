@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const MomsList__burger = [
@@ -69,15 +70,7 @@ const MomsList__rest = [
 const Moms = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">맘스터치</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">맘스터치</div>
-        </div>
-      </header>
+      <BrandHeader name="맘스터치" />
       <main>
         <MenuSection title="버거" items={MomsList__burger} />
         <MenuSection title="치킨" items={MomsList__chicken} />

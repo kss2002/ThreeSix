@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const SeumailList__coffee = [
@@ -404,15 +405,7 @@ const SeumailList__blended = [
 const Seumail = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">스마일하우스</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">스마일하우스</div>
-        </div>
-      </header>
+      <BrandHeader name="스마일하우스" />
       <main>
         <MenuSection title="COFFEE" items={SeumailList__coffee} />
         <MenuSection title="BUBBLE TEA" items={SeumailList__bubble} />

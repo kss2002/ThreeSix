@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const JikjinList__main = [
@@ -57,15 +58,7 @@ const JikjinList__extra = [
 const Jikjin = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">직진닭강정</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">직진닭강정</div>
-        </div>
-      </header>
+      <BrandHeader name="직진닭강정" />
       <main>
         <MenuSection title="닭강정" items={JikjinList__main} />
         <MenuSection title="음료" items={JikjinList__drink} />

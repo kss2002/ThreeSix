@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const HuchamjalList__main = [
@@ -164,15 +165,7 @@ const HuchamjalList__extra = [
 const Huchamjal = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">후라이드 참 잘하는 집</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">후라이드 참 잘하는 집</div>
-        </div>
-      </header>
+      <BrandHeader name="후라이드 참 잘하는 집" />
       <main>
         <MenuSection title="치킨 메뉴" items={HuchamjalList__main} />
         <MenuSection title="세트" items={HuchamjalList__set} />

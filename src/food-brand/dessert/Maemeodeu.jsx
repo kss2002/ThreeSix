@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import UpDown from '../UpDown';
 import MainFooter from '../../main-components/MainFooter';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const MaemeodeuList__coffee = [
@@ -27,15 +28,7 @@ const MaemeodeuList__coffee = [
 const Maemeodeu = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">매머드 커피</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">매머드 커피</div>
-        </div>
-      </header>
+      <BrandHeader name="매머드 커피" />
       <main>
         <MenuSection title="커피" items={MaemeodeuList__coffee} />
         <MenuBottom />

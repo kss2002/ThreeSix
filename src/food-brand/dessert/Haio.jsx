@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const HaioList__coffee = [
@@ -219,15 +220,7 @@ const HaioList__topping = [
 const Haio = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">하이오 커피</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">하이오 커피</div>
-        </div>
-      </header>
+      <BrandHeader name="하이오 커피" />
       <main>
         <MenuSection title="COFFEE" items={HaioList__coffee} />
         <MenuSection title="BUBBLIN" items={HaioList__bubblin} />

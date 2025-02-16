@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const SillungList__main = [
@@ -228,15 +229,7 @@ const SillungList__drink = [
 const Sillung = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">신룽푸마라탕</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">신룽푸마라탕</div>
-        </div>
-      </header>
+      <BrandHeader name="신룽푸마라탕" />
       <main>
         <MenuSection title="메인메뉴" items={SillungList__main} />
         <MenuSection title="세트메뉴" items={SillungList__set} />

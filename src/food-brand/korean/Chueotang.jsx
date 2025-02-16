@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const ChueotangList__main = [
@@ -45,15 +46,7 @@ const ChueotangList__noodle = [
 const Chueotang = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">담터추어탕</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">담터추어탕</div>
-        </div>
-      </header>
+      <BrandHeader name="담터추어탕" />
       <main>
         <MenuSection title="담터추어탕" items={ChueotangList__main} />
         <MenuSection title="추어튀김" items={ChueotangList__fried} />

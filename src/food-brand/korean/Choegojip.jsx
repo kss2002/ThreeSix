@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const ChoegojipList__steam = [
@@ -192,15 +193,7 @@ const ChoegojipList__drink = [
 const Choegojip = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">최고집해물찜칼국수</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">최고집해물찜칼국수</div>
-        </div>
-      </header>
+      <BrandHeader name="최고집해물찜칼국수" />
       <main>
         <MenuSection title="찜류" items={ChoegojipList__steam} />
         <MenuSection title="식사류" items={ChoegojipList__meal} />

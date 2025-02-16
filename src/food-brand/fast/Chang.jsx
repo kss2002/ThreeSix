@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const ChangList__all = [
@@ -131,15 +132,7 @@ const ChangList__all = [
 const Chang = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">창부리또</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">창부리또</div>
-        </div>
-      </header>
+      <BrandHeader name="창부리또" />
       <main>
         <MenuSection title="전체 메뉴" items={ChangList__all} />
         <MenuBottom />

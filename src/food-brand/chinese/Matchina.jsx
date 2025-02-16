@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const MatchinaList__cotton = [
@@ -111,15 +112,7 @@ const MatchinaList__drink = [
 const Matchina = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">맛차이나</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">맛차이나</div>
-        </div>
-      </header>
+      <BrandHeader name="맛차이나" />
       <main>
         <MenuSection title="면류" items={MatchinaList__cotton} />
         <MenuSection title="토핑" items={MatchinaList__topping} />

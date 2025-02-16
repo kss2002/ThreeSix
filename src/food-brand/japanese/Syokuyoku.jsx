@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const SyokuyokuList__ramen = [
@@ -213,15 +214,7 @@ const SyokuyokuList__drink = [
 const Syokuyoku = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">쇼쿠요쿠</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">쇼쿠요쿠</div>
-        </div>
-      </header>
+      <BrandHeader name="쇼쿠요쿠" />
       <main>
         <MenuSection title="라멘" items={SyokuyokuList__ramen} />
         <MenuSection title="든든한 밥" items={SyokuyokuList__rice} />

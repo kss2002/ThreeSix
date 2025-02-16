@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const KkumList__main = [
@@ -104,15 +105,7 @@ const KkumList__drink = [
 const Kkum = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">꿈꾸는 떡볶이</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">꿈꾸는 떡볶이</div>
-        </div>
-      </header>
+      <BrandHeader name="꿈꾸는 떡볶이" />
       <main>
         <MenuSection title="메인 메뉴" items={KkumList__main} />
         <MenuSection title="추가 사리" items={KkumList__add} />

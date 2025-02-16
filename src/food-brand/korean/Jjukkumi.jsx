@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const JjukkumiList__main = [
@@ -156,15 +157,7 @@ const JjukkumiList__drink = [
 const Jjukkumi = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">담터쭈꾸미</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">담터쭈꾸미</div>
-        </div>
-      </header>
+      <BrandHeader name="담터쭈꾸미" />
       <main>
         <MenuSection
           title="쭈꾸미볶음(2인이상주문)"

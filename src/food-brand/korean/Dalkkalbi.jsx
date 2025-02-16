@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const DalkkalbiList__new = [
@@ -50,15 +51,7 @@ const DalkkalbiList__main = [
 const Dalkkalbi = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">스마일 닭갈비</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">스마일 닭갈비</div>
-        </div>
-      </header>
+      <BrandHeader name="스마일 닭갈비" />
       <main>
         <MenuSection title="새로 나온 메뉴" items={DalkkalbiList__new} />
         <MenuSection title="닭갈비" items={DalkkalbiList__main} />

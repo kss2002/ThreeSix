@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const GonggangList__coffee = [
@@ -351,15 +352,7 @@ const GonggangList__croiffle = [
 const Gonggang = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">카페 공강</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">카페 공강</div>
-        </div>
-      </header>
+      <BrandHeader name="카페 공강" />
       <main>
         <MenuSection title="Coffee" items={GonggangList__coffee} />
         <MenuSection title="Non Coffee" items={GonggangList__noncoffee} />

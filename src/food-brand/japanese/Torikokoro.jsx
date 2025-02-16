@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const TorikokoroList__menu = [
@@ -69,15 +70,7 @@ const TorikokoroList__drink = [
 const Torikokoro = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">토리코코로</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">토리코코로</div>
-        </div>
-      </header>
+      <BrandHeader name="토리코코로" />
       <main>
         <MenuSection title="사장님 추천 메뉴" items={TorikokoroList__menu} />
         <MenuSection title="라멘" items={TorikokoroList__main} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const RinseuList__coffee = [
@@ -201,15 +202,7 @@ const RinseuList__bread = [
 const Rinseu = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">린스테이블</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">린스테이블</div>
-        </div>
-      </header>
+      <BrandHeader name="린스테이블" />
       <main>
         <MenuSection title="COFFEE" items={RinseuList__coffee} />
         <MenuSection title="NON COFFEE" items={RinseuList__noncoffee} />

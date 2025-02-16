@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const HaneuljigiList__menu = [
@@ -70,15 +71,7 @@ const HaneuljigiList__set = [
 const Haneuljigi = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">하늘지기(수내닭꼬치)</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">하늘지기(수내닭꼬치)</div>
-        </div>
-      </header>
+      <BrandHeader name="하늘지기(수내닭꼬치)" />
       <main>
         <MenuSection title="꼬치단품메뉴" items={HaneuljigiList__menu} />
         <MenuSection title="꼬치 세트" items={HaneuljigiList__set} />

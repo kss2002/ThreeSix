@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const DaramiList__main = [
@@ -46,15 +47,7 @@ const DaramiList__summer = [
 const Darami = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">다람이임자탕</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">다람이임자탕</div>
-        </div>
-      </header>
+      <BrandHeader name="다람이임자탕" />
       <main>
         <MenuSection title="다람이임자탕 차림표" items={DaramiList__main} />
         <MenuSection title="하절기" items={DaramiList__summer} />

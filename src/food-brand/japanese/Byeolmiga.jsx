@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const ByeolmigaList__meal = [
@@ -124,15 +125,7 @@ const ByeolmigaList__drink = [
 const Byeolmiga = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">별미가</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">별미가</div>
-        </div>
-      </header>
+      <BrandHeader name="별미가" />
       <main>
         <MenuSection title="식사" items={ByeolmigaList__meal} />
         <MenuSection title="추가" items={ByeolmigaList__add} />

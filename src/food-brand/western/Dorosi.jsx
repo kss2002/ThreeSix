@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const DorosiList__pizza = [
@@ -131,15 +132,7 @@ const DorosiList__drink = [
 const Dorosi = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">도로시화덕피자</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">도로시화덕피자</div>
-        </div>
-      </header>
+      <BrandHeader name="도로시화덕피자" />
       <main>
         <MenuSection title="PIZZA" items={DorosiList__pizza} />
         <MenuSection title="Pasta" items={DorosiList__pasta} />

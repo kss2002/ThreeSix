@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const HongwonList__cotton = [
@@ -290,15 +291,7 @@ const HongwonList__rest = [
 const Hongwon = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">홍원</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">홍원</div>
-        </div>
-      </header>
+      <BrandHeader name="홍원" />
       <main>
         <MenuSection title="면류" items={HongwonList__cotton} />
         <MenuSection title="요리류" items={HongwonList__cook} />

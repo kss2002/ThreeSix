@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const YogiList__none = [
@@ -15,15 +16,7 @@ const YogiList__none = [
 const Yogi = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">YOGI YOGURT</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">YOGI YOGURT</div>
-        </div>
-      </header>
+      <BrandHeader name="YOGI YOGURT" />
       <main>
         <MenuSection title="카페, 디저트" items={YogiList__none} />
         <MenuBottom />

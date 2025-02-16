@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const GamjatangList__none = [
@@ -16,15 +17,7 @@ const GamjatangList__none = [
 const Gamjatang = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">세상만사 감자탕</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">세상만사 감자탕</div>
-        </div>
-      </header>
+      <BrandHeader name="세상만사 감자탕" />
       <main>
         <MenuSection title="카페, 디저트" items={GamjatangList__none} />
         <MenuBottom />

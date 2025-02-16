@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const PastapizzaList__tomato = [
@@ -377,17 +378,7 @@ const PastapizzaList__side = [
 const Pastapizza = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">오렌지몽키파스타&마르코죤스피자</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">
-            오렌지몽키파스타&마르코죤스피자
-          </div>
-        </div>
-      </header>
+      <BrandHeader name="오렌지몽키파스타&마르코죤스피자" />
       <main>
         <MenuSection title="토마토 소스" items={PastapizzaList__tomato} />
         <MenuSection title="크림 소스" items={PastapizzaList__cream} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const SsalguksuList__ricenoodle = [
@@ -134,15 +135,7 @@ const SsalguksuList__drink = [
 const Ssalguksu = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">쌀국수공방</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">쌀국수공방</div>
-        </div>
-      </header>
+      <BrandHeader name="쌀국수공방" />
       <main>
         <MenuSection title="쌀국수" items={SsalguksuList__ricenoodle} />
         <MenuSection title="카츠" items={SsalguksuList__katsu} />

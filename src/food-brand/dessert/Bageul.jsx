@@ -2,6 +2,7 @@ import React from 'react';
 import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import UpDown from '../UpDown';
 import MainFooter from '../../main-components/MainFooter';
+import BrandHeader from '../../discharge/BrandHeader';
 
 // 리스트 선언
 const BageulList__signiture = [
@@ -191,15 +192,7 @@ const BageulList__bread = [
 const Bageul = () => {
   return (
     <section>
-      <header>
-        {/* brand head */}
-        <div className="detail__head">바글바글 베이커리</div>
-
-        {/* pc */}
-        <div className="detail-pc__background">
-          <div className="detail-pc__title">바글바글 베이커리</div>
-        </div>
-      </header>
+      <BrandHeader name="바글바글 베이커리" />
       <main>
         <MenuSection title="SIGNITURE TEA" items={BageulList__signiture} />
         <MenuSection title="Black Tea" items={BageulList__black} />
