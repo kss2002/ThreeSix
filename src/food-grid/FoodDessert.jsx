@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import seumail from '../assets/img/rest-food/d-rest/Seumail.png';
@@ -9,7 +9,6 @@ import idiya from '../assets/img/rest-food/d-rest/Idiya.png';
 import yogi from '../assets/img/rest-food/d-rest/Yogi.png';
 import gonggang from '../assets/img/rest-food/d-rest/Gonggang.png';
 import haio from '../assets/img/rest-food/d-rest/Haio.png';
-import LoadingSpinner from '../LoadingSpinner';
 
 const FoodDessert = () => {
   const dessertList = useMemo(
@@ -81,31 +80,8 @@ const FoodDessert = () => {
     ],
     []
   );
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  return (
-    <>
-      {loading ? (
-        <LoadingSpinner loading={loading} />
-      ) : (
-        <FoodList title="후식" foodItems={dessertList} />
-      )}
-    </>
-  );
+  return <FoodList title="후식" foodItems={dessertList} />;
 };
 
 export default FoodDessert;

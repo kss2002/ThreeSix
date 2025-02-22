@@ -14,9 +14,18 @@ import LoadingSpinner from '../LoadingSpinner';
 
 const MainView = () => {
   const [loading, setLoading] = useState(true);
+  const [shouldShowLoader, setShouldShowLoader] = useState(false);
 
   useEffect(() => {
+    const startTime = performance.now(); // 시작 시간 기록
+
     const handleLoad = () => {
+      const loadTime = performance.now() - startTime; // 로딩 시간 계산
+
+      if (loadTime >= 2000) {
+        setShouldShowLoader(true); // 2초 이상이면 로딩 표시
+      }
+
       setLoading(false);
     };
 
@@ -31,7 +40,7 @@ const MainView = () => {
 
   return (
     <>
-      {loading ? (
+      {loading && shouldShowLoader ? (
         <LoadingSpinner loading={loading} />
       ) : (
         <>

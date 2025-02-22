@@ -1,10 +1,9 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import byeolmiga from '../assets/img/rest-food/j-rest/Byeolmiga.png';
 import torikokoro from '../assets/img/rest-food/j-rest/Torikokoro.png';
 import syokuyoku from '../assets/img/rest-food/j-rest/Syokuyoku.png';
-import LoadingSpinner from '../LoadingSpinner';
 
 const FoodJapanese = () => {
   const japaneseList = useMemo(
@@ -36,31 +35,8 @@ const FoodJapanese = () => {
     ],
     []
   );
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  return (
-    <>
-      {loading ? (
-        <LoadingSpinner loading={loading} />
-      ) : (
-        <FoodList title="일식" foodItems={japaneseList} />
-      )}
-    </>
-  );
+  return <FoodList title="일식" foodItems={japaneseList} />;
 };
 
 export default FoodJapanese;

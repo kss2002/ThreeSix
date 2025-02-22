@@ -1,9 +1,8 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import pastapizza from '../assets/img/rest-food/w-rest/Pastapizza.png';
 import dorosi from '../assets/img/rest-food/w-rest/Dorosi.png';
-import LoadingSpinner from '../LoadingSpinner';
 
 const FoodWestern = () => {
   const westernList = useMemo(
@@ -27,31 +26,8 @@ const FoodWestern = () => {
     ],
     []
   );
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  return (
-    <>
-      {loading ? (
-        <LoadingSpinner loading={loading} />
-      ) : (
-        <FoodList title="양식" foodItems={westernList} />
-      )}
-    </>
-  );
+  return <FoodList title="양식" foodItems={westernList} />;
 };
 
 export default FoodWestern;

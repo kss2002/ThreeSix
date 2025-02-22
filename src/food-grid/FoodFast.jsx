@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import huchamjal from '../assets/img/rest-food/f-rest/Huchamjal.png';
@@ -6,7 +6,6 @@ import jikjin from '../assets/img/rest-food/f-rest/Jikjin.png';
 import moms from '../assets/img/rest-food/f-rest/Moms.png';
 import saendu from '../assets/img/rest-food/f-rest/Saendu.png';
 import chang from '../assets/img/rest-food/f-rest/Chang.png';
-import LoadingSpinner from '../LoadingSpinner';
 
 const FoodFast = () => {
   const fastList = useMemo(
@@ -54,31 +53,8 @@ const FoodFast = () => {
     ],
     []
   );
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  return (
-    <>
-      {loading ? (
-        <LoadingSpinner loading={loading} />
-      ) : (
-        <FoodList title="기타" foodItems={fastList} />
-      )}
-    </>
-  );
+  return <FoodList title="기타" foodItems={fastList} />;
 };
 
 export default FoodFast;
