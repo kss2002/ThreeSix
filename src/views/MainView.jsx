@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Main from '../main-components/Main';
 import MainHeader from '../main-components/MainHeader';
 import MainIntro from '../main-components/MainIntro';
@@ -10,24 +10,46 @@ import MainListPC from '../main-components/MainListPC';
 import MainHello from '../main-components/MainHello';
 import SearchMobile from '../discharge/SearchMobile';
 
+import LoadingSpinner from '../LoadingSpinner';
+
 const MainView = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => window.removeEventListener('load', handleLoad);
+  }, []);
+
   return (
     <>
-      <MainHeader />
-      <Main>
-        <MainHello />
-        <Search />
-        <SearchMobile />
-        <MainIntro />
-        <MainListMobile />
-        <MainListPC />
-        <MainContact />
-      </Main>
-      <MainFooter />
+      {loading ? (
+        <LoadingSpinner loading={loading} />
+      ) : (
+        <>
+          <MainHeader />
+          <Main>
+            <MainHello />
+            <Search />
+            <SearchMobile />
+            <MainIntro />
+            <MainListMobile />
+            <MainListPC />
+            <MainContact />
+          </Main>
+          <MainFooter />
+        </>
+      )}
     </>
   );
 };
 
 export default MainView;
-
-/* 버튼 클릭시 나오는 메인 화면 */

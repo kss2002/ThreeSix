@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import haneuljigi from '../assets/img/rest-food/k-rest/Haneuljigi.png';
@@ -10,6 +10,7 @@ import chueotang from '../assets/img/rest-food/k-rest/Chueotang.png';
 import jjukkumi from '../assets/img/rest-food/k-rest/Jjukkumi.png';
 import gamjatang from '../assets/img/rest-food/k-rest/Gamjatang.png';
 import choegojip from '../assets/img/rest-food/k-rest/Choegojip.png';
+import LoadingSpinner from '../LoadingSpinner';
 
 const FoodKorean = () => {
   const koreanList = useMemo(
@@ -89,8 +90,31 @@ const FoodKorean = () => {
     ],
     []
   );
+  const [loading, setLoading] = useState(true);
 
-  return <FoodList title="한식" foodItems={koreanList} />;
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => window.removeEventListener('load', handleLoad);
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <LoadingSpinner loading={loading} />
+      ) : (
+        <FoodList title="한식" foodItems={koreanList} />
+      )}
+    </>
+  );
 };
 
 export default FoodKorean;

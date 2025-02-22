@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useCategoryStore from '../store/categoryStore';
 import SliderCompo from '../discharge/SliderCompo';
 import CategoryNav from '../discharge/CategoryNav';
 import MapComponent from '../discharge/MapComponent';
+import LoadingSpinner from '../LoadingSpinner';
 
 // map marker
 const markers = [
@@ -23,41 +24,74 @@ const MainListPC = () => {
   const { currentCategory, setCurrentCategory, getCategoryImages } =
     useCategoryStore();
 
+  const [loading, setLoading] = useState(true);
   const categories = ['중식', '일식', '양식', '한식', '분식', '후식', '기타'];
+
+  useEffect(() => {
+    // 현재 카테고리에 해당하는 이미지 가져오기
+    const images = getCategoryImages(currentCategory);
+
+    // 이미지 로드 체크
+    let loadedCount = 0;
+    if (images.length === 0) {
+      setLoading(false);
+      return;
+    }
+
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image.src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setLoading(false); // 모든 이미지가 로드되면 로딩 해제
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setLoading(false);
+        }
+      };
+    });
+  }, [currentCategory, getCategoryImages]);
 
   return (
     <main id="restaurant">
-      <section className="Mainlist-pc">
-        <div className="Mainlist-pc__top">
-          <p className="Mainlist-pc__mainTitle">
-            삼육대 후문 식당을 찾아보세요!
-          </p>
-          <CategoryNav
-            categories={categories}
-            currentCategory={currentCategory}
-            onCategoryChange={setCurrentCategory}
-          />
-          <div className="Mainlist-pc__bar-container">
-            {categories.map((category) => (
-              <div
-                key={category}
-                className={`Mainlistpc__bar ${
-                  currentCategory === category ? 'active' : ''
-                }`}
-                style={{
-                  backgroundColor:
-                    currentCategory === category ? '#46CC63' : '#f2f2f2', // 선택된 카테고리만 색상 변경
-                }}
-              ></div>
-            ))}
+      {loading && <LoadingSpinner loading={loading} />}
+      {!loading && (
+        <section className="Mainlist-pc">
+          <div className="Mainlist-pc__top">
+            <p className="Mainlist-pc__mainTitle">
+              삼육대 후문 식당을 찾아보세요!
+            </p>
+            <CategoryNav
+              categories={categories}
+              currentCategory={currentCategory}
+              onCategoryChange={setCurrentCategory}
+            />
+            <div className="Mainlist-pc__bar-container">
+              {categories.map((category) => (
+                <div
+                  key={category}
+                  className={`Mainlistpc__bar ${
+                    currentCategory === category ? 'active' : ''
+                  }`}
+                  style={{
+                    backgroundColor:
+                      currentCategory === category ? '#46CC63' : '#f2f2f2', // 선택된 카테고리만 색상 변경
+                  }}
+                ></div>
+              ))}
+            </div>
+            <SliderCompo
+              images={getCategoryImages(currentCategory)}
+              settings={settings}
+            />
           </div>
-          <SliderCompo
-            images={getCategoryImages(currentCategory)}
-            settings={settings}
-          />
-        </div>
-        <div className="Mainlist-pc__bottom"></div>
-      </section>
+          <div className="Mainlist-pc__bottom"></div>
+        </section>
+      )}
 
       <div id="researchMap">
         <p className="Mainmap-pc__title">

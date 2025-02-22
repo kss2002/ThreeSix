@@ -1,10 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import hongwon from '../assets/img/rest-food/c-rest/Hongwon.png';
 import gawan from '../assets/img/rest-food/c-rest/Gawan.png';
 import matchina from '../assets/img/rest-food/c-rest/Matchina.png';
 import sillung from '../assets/img/rest-food/c-rest/Sillung.png';
+import LoadingSpinner from '../LoadingSpinner';
 
 const Foodchinese = () => {
   const chineseList = useMemo(
@@ -44,8 +45,31 @@ const Foodchinese = () => {
     ],
     []
   );
+  const [loading, setLoading] = useState(true);
 
-  return <FoodList title="중식" foodItems={chineseList} />;
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => window.removeEventListener('load', handleLoad);
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <LoadingSpinner loading={loading} />
+      ) : (
+        <FoodList title="중식" foodItems={chineseList} />
+      )}
+    </>
+  );
 };
 
 export default Foodchinese;

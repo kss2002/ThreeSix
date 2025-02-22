@@ -1,7 +1,6 @@
 // react - main 세팅
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import LoadingSpinner from '../src/LoadingSpinner';
 import MainView from './views/MainView';
 
 // 카테고리 - import
@@ -58,93 +57,70 @@ import ScrollToTop from './ScrollToTop';
 import SubHeader from './food-brand/SubHeader';
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // 모든 DOM 요소가 로드된 후 loading을 false로 변경
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
   return (
     <BrowserRouter>
-      {loading ? (
-        <LoadingSpinner loading={loading} />
-      ) : (
-        <>
-          <ScrollToTop />
-          <SubHeader />
-          <Routes>
-            {/* 메인 화면 */}
-            <Route path="/" element={<MainView />} />
+      <ScrollToTop />
+      <SubHeader />
+      <Routes>
+        {/* 메인 화면 */}
+        <Route path="/" element={<MainView />} />
 
-            {/* 카테고리 화면 */}
-            <Route path="/chinese" element={<ChineseView />} />
-            <Route path="/western" element={<WesternView />} />
-            <Route path="/korean" element={<KoreanView />} />
-            <Route path="/japanese" element={<JapaneseView />} />
-            <Route path="/school" element={<SchoolView />} />
-            <Route path="/dessert" element={<DessertView />} />
-            <Route path="/fast" element={<FastView />} />
+        {/* 카테고리 화면 */}
+        <Route path="/chinese" element={<ChineseView />} />
+        <Route path="/western" element={<WesternView />} />
+        <Route path="/korean" element={<KoreanView />} />
+        <Route path="/japanese" element={<JapaneseView />} />
+        <Route path="/school" element={<SchoolView />} />
+        <Route path="/dessert" element={<DessertView />} />
+        <Route path="/fast" element={<FastView />} />
 
-            {/* 중식 명단 */}
-            <Route path="/hongwon" element={<Hongwon />} />
-            <Route path="/gawan" element={<Gawan />} />
-            <Route path="/matchina" element={<Matchina />} />
-            <Route path="/sillung" element={<Sillung />} />
+        {/* 중식 명단 */}
+        <Route path="/hongwon" element={<Hongwon />} />
+        <Route path="/gawan" element={<Gawan />} />
+        <Route path="/matchina" element={<Matchina />} />
+        <Route path="/sillung" element={<Sillung />} />
 
-            {/* 후식 명단 */}
-            <Route path="/seumail" element={<Seumail />} />
-            <Route path="/bageul" element={<Bageul />} />
-            <Route path="/maemeodeu" element={<Maemeodeu />} />
-            <Route path="/rinseu" element={<Rinseu />} />
-            <Route path="/idiya" element={<Idiya />} />
-            <Route path="/yogi" element={<Yogi />} />
-            <Route path="/Gonggang" element={<Gonggang />} />
-            <Route path="/haio" element={<Haio />} />
+        {/* 후식 명단 */}
+        <Route path="/seumail" element={<Seumail />} />
+        <Route path="/bageul" element={<Bageul />} />
+        <Route path="/maemeodeu" element={<Maemeodeu />} />
+        <Route path="/rinseu" element={<Rinseu />} />
+        <Route path="/idiya" element={<Idiya />} />
+        <Route path="/yogi" element={<Yogi />} />
+        <Route path="/Gonggang" element={<Gonggang />} />
+        <Route path="/haio" element={<Haio />} />
 
-            {/* 기타 명단 */}
-            <Route path="/huchamjal" element={<Huchamjal />} />
-            <Route path="/jikjin" element={<Jikjin />} />
-            <Route path="/moms" element={<Moms />} />
-            <Route path="/saendu" element={<Saendu />} />
-            <Route path="/chang" element={<Chang />} />
+        {/* 기타 명단 */}
+        <Route path="/huchamjal" element={<Huchamjal />} />
+        <Route path="/jikjin" element={<Jikjin />} />
+        <Route path="/moms" element={<Moms />} />
+        <Route path="/saendu" element={<Saendu />} />
+        <Route path="/chang" element={<Chang />} />
 
-            {/* 한식 명단 */}
-            <Route path="/haneuljigi" element={<Haneuljigi />} />
-            <Route path="/darami" element={<Darami />} />
-            <Route path="/dalkkalbi" element={<Dalkkalbi />} />
-            <Route path="/cheone" element={<Cheone />} />
-            <Route path="/ssalguksu" element={<Ssalguksu />} />
-            <Route path="/chueotang" element={<Chueotang />} />
-            <Route path="/jjukkumi" element={<Jjukkumi />} />
-            <Route path="/gamjatang" element={<Gamjatang />} />
-            <Route path="/choegojip" element={<Choegojip />} />
+        {/* 한식 명단 */}
+        <Route path="/haneuljigi" element={<Haneuljigi />} />
+        <Route path="/darami" element={<Darami />} />
+        <Route path="/dalkkalbi" element={<Dalkkalbi />} />
+        <Route path="/cheone" element={<Cheone />} />
+        <Route path="/ssalguksu" element={<Ssalguksu />} />
+        <Route path="/chueotang" element={<Chueotang />} />
+        <Route path="/jjukkumi" element={<Jjukkumi />} />
+        <Route path="/gamjatang" element={<Gamjatang />} />
+        <Route path="/choegojip" element={<Choegojip />} />
 
-            {/* 일식 명단 */}
-            <Route path="/byeolmiga" element={<Byeolmiga />} />
-            <Route path="/torikokoro" element={<Torikokoro />} />
-            <Route path="/syokuyoku" element={<Syokuyoku />} />
+        {/* 일식 명단 */}
+        <Route path="/byeolmiga" element={<Byeolmiga />} />
+        <Route path="/torikokoro" element={<Torikokoro />} />
+        <Route path="/syokuyoku" element={<Syokuyoku />} />
 
-            {/* 분식 명단 */}
-            <Route path="/kkum" element={<Kkum />} />
-            <Route path="/manyeo" element={<Manyeo />} />
+        {/* 분식 명단 */}
+        <Route path="/kkum" element={<Kkum />} />
+        <Route path="/manyeo" element={<Manyeo />} />
 
-            {/* 양식 명단 */}
-            <Route path="/pastapizza" element={<Pastapizza />} />
-            <Route path="/dorosi" element={<Dorosi />} />
-          </Routes>
-        </>
-      )}
+        {/* 양식 명단 */}
+        <Route path="/pastapizza" element={<Pastapizza />} />
+        <Route path="/dorosi" element={<Dorosi />} />
+      </Routes>
     </BrowserRouter>
   );
 };

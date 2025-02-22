@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
 import kkum from '../assets/img/rest-food/s-rest/Kkum.png';
 import manyeo from '../assets/img/rest-food/s-rest/Manyeo.png';
+import LoadingSpinner from '../LoadingSpinner';
 
 const FoodSchool = () => {
   const schoolList = useMemo(
@@ -26,8 +27,31 @@ const FoodSchool = () => {
     ],
     []
   );
+  const [loading, setLoading] = useState(true);
 
-  return <FoodList title="분식" foodItems={schoolList} />;
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => window.removeEventListener('load', handleLoad);
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <LoadingSpinner loading={loading} />
+      ) : (
+        <FoodList title="분식" foodItems={schoolList} />
+      )}
+    </>
+  );
 };
 
 export default FoodSchool;
