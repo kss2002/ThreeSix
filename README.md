@@ -39,6 +39,8 @@ MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/k
 
 - React slick
 
+- React spinners
+
 - swiper
 
 - Scss
