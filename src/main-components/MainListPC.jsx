@@ -27,7 +27,7 @@ const MainListPC = () => {
   const [loading, setLoading] = useState(true);
   const categories = ['중식', '일식', '양식', '한식', '분식', '후식', '기타'];
 
-  // loading Modify.
+  // loading Modify. 2025/02/24
   useEffect(() => {
     setLoading(true);
     const images = getCategoryImages(currentCategory);
