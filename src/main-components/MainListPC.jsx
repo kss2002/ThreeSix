@@ -27,38 +27,43 @@ const MainListPC = () => {
   const [loading, setLoading] = useState(true);
   const categories = ['중식', '일식', '양식', '한식', '분식', '후식', '기타'];
 
+  // loading Modify.
   useEffect(() => {
-    // 현재 카테고리에 해당하는 이미지 가져오기
+    setLoading(true);
     const images = getCategoryImages(currentCategory);
-
-    // 이미지 로드 체크
-    let loadedCount = 0;
     if (images.length === 0) {
-      setLoading(false);
+      setTimeout(() => setLoading(false), 1000); // 최소 1초 로딩 후 해제
       return;
     }
+
+    let loadedCount = 0;
+    const startTime = Date.now();
+
+    const checkLoading = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(1000 - elapsedTime, 0);
+        setTimeout(() => setLoading(false), remainingTime); // 최소 1초 보장
+      }
+    };
 
     images.forEach((image) => {
       const img = new Image();
       img.src = image.src;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === images.length) {
-          setLoading(false); // 모든 이미지가 로드되면 로딩 해제
-        }
-      };
-      img.onerror = () => {
-        loadedCount++;
-        if (loadedCount === images.length) {
-          setLoading(false);
-        }
-      };
+      img.onload = checkLoading;
+      img.onerror = checkLoading;
     });
   }, [currentCategory, getCategoryImages]);
 
   return (
     <main id="restaurant">
-      {loading && <LoadingSpinner loading={loading} />}
+      {loading && (
+        <>
+          <LoadingSpinner loading={loading} />
+          <div className="betaloading">로딩 중..</div>
+        </>
+      )}
       {!loading && (
         <section className="Mainlist-pc">
           <div className="Mainlist-pc__top">
