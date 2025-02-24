@@ -82,7 +82,7 @@ export const PCimagesUS = [
   {
     src: require('../assets/img/pc-grid/us/파스타.png'),
     alt: '오렌지몽키파스타/마르코죤스피자',
-    title: '오렌지몽키파스타/마르코죤스피자',
+    title: '오렌지몽키/마르코죤스',
     num: '전화번호 0507-1378-0154',
     time: '영업시간 10:30 ~ 22:00',
     path: '/pastapizza',
