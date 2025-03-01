@@ -3,6 +3,7 @@ import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 import BrandHeader from '../../discharge/BrandHeader';
+import PopUp from '../../views/PopUp';
 
 // 리스트 선언
 const ByeolmigaList__meal = [
@@ -125,6 +126,7 @@ const ByeolmigaList__drink = [
 const Byeolmiga = () => {
   return (
     <section>
+      <PopUp />
       <BrandHeader name="별미가" />
       <main>
         <MenuSection title="식사" items={ByeolmigaList__meal} />

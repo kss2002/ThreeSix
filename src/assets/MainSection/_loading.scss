@@ -11,6 +11,22 @@
   z-index: 1000;
 }
 
+.PoP {
+  text-align: center;
+  font-family: 'threesix-regular';
+}
+
+.PoPbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--threesixPC-color);
+  color: var(--white-color);
+  font-family: 'threesix-light';
+  font-size: 24px;
+}
+
 //pc
 @media (min-width: 993px) {
   .betaloading {
