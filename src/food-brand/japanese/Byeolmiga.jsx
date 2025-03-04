@@ -126,7 +126,7 @@ const ByeolmigaList__drink = [
 const Byeolmiga = () => {
   return (
     <section>
-      {/* 3/1 팝업 */}
+      {/* 3/4 팝업 표시 제거 */}
       <PopUp />
       <BrandHeader name="별미가" />
       <main>
