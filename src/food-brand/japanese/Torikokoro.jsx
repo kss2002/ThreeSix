@@ -8,34 +8,34 @@ import BrandHeader from '../../discharge/BrandHeader';
 const TorikokoroList__menu = [
   {
     name: '쇼유 라멘',
-    price: '9,000원',
+    price: '9,500원',
   },
   {
     name: '시오 라멘',
-    price: '9,000원',
+    price: '9,500원',
   },
 ];
 
 const TorikokoroList__main = [
   {
     name: '쇼유 라멘',
-    price: '9,000원',
+    price: '9,500원',
   },
   {
     name: '시오 라멘',
-    price: '9,000원',
+    price: '9,500원',
   },
   {
     name: '카라이 미소라멘',
-    price: '9,000원',
+    price: '9,500원',
   },
   {
     name: '마제 소바',
-    price: '9,000원',
+    price: '9,500원',
   },
   {
     name: '시루나시 탄탄멘',
-    price: '9,000원',
+    price: '9,500원',
   },
 ];
 
