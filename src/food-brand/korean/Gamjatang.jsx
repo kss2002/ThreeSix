@@ -19,7 +19,7 @@ const Gamjatang = () => {
     <section>
       <BrandHeader name="세상만사 감자탕" />
       <main>
-        <MenuSection title="카페, 디저트" items={GamjatangList__none} />
+        <MenuSection title="미정" items={GamjatangList__none} />
         <MenuBottom />
       </main>
       <footer>
