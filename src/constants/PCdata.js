@@ -107,6 +107,14 @@ export const PCimagesUS = [
 // 한식 이미지 데이터
 export const PCimagesKorea = [
   {
+    src: require('../assets/img/pc-grid/Korea/출구없는.jpg'),
+    alt: '출구없는덮밥집',
+    title: '출구없는덮밥집',
+    num: '전화번호 010-9677-7518',
+    time: '영업시간 11:00 ~ 21:00',
+    path: '/chulgu',
+  },
+  {
     src: require('../assets/img/pc-grid/Korea/하늘지기, 꼬치.png'),
     alt: '하늘지기(수내닭꼬치)',
     title: '하늘지기(수내닭꼬치)',

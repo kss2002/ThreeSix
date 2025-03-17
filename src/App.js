@@ -32,6 +32,7 @@ import Moms from './food-brand/fast/Moms';
 import Saendu from './food-brand/fast/Saendu';
 import Chang from './food-brand/fast/Chang';
 // 한식 명단 - import
+import Chulgu from './food-brand/korean/Chulgu';
 import Haneuljigi from './food-brand/korean/Haneuljigi';
 import Darami from './food-brand/korean/Darami';
 import Dalkkalbi from './food-brand/korean/Dalkkalbi';
@@ -98,6 +99,7 @@ const App = () => {
         <Route path="/chang" element={<Chang />} />
 
         {/* 한식 명단 */}
+        <Route path="/chulgu" element={<Chulgu />} />
         <Route path="/haneuljigi" element={<Haneuljigi />} />
         <Route path="/darami" element={<Darami />} />
         <Route path="/dalkkalbi" element={<Dalkkalbi />} />

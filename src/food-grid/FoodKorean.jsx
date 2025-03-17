@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import FoodList from '../discharge/FoodList';
 // 브랜드 사진
+import chulgu from '../assets/img/rest-food/k-rest/chulgu.png';
 import haneuljigi from '../assets/img/rest-food/k-rest/Haneuljigi.png';
 import darami from '../assets/img/rest-food/k-rest/Darami.png';
 import dalkkalbi from '../assets/img/rest-food/k-rest/Dalkkalbi.png';
@@ -16,6 +17,14 @@ const FoodKorean = () => {
     () => [
       {
         id: 1,
+        title: '출구없는덮밥집',
+        img: chulgu,
+        time: '영업시간 11:00 ~ 21:00',
+        phoneNum: '전화번호 010-9677-7518',
+        path: '/chulgu',
+      },
+      {
+        id: 2,
         title: '하늘지기(수내닭꼬치)',
         img: haneuljigi,
         time: '영업시간 09:00 ~ 22:00',
@@ -23,7 +32,7 @@ const FoodKorean = () => {
         path: '/haneuljigi',
       },
       {
-        id: 2,
+        id: 3,
         title: '다람이임자탕',
         img: darami,
         time: '영업시간 11:00 ~ 21:00',
@@ -31,7 +40,7 @@ const FoodKorean = () => {
         path: '/darami',
       },
       {
-        id: 3,
+        id: 4,
         title: '스마일닭갈비',
         img: dalkkalbi,
         time: '영업시간 10:00 ~ 21:00',
@@ -39,7 +48,7 @@ const FoodKorean = () => {
         path: '/dalkkalbi',
       },
       {
-        id: 4,
+        id: 5,
         title: '청와삼대',
         img: cheone,
         time: '영업시간 10:00 ~ 22:00',
@@ -47,7 +56,7 @@ const FoodKorean = () => {
         path: '/cheone',
       },
       {
-        id: 5,
+        id: 6,
         title: '쌀국수공방',
         img: ssalguksu,
         time: '영업시간 07:30 ~ 14:30',
@@ -55,7 +64,7 @@ const FoodKorean = () => {
         path: '/ssalguksu',
       },
       {
-        id: 6,
+        id: 7,
         title: '담터추어탕',
         img: chueotang,
         time: '영업시간 10:00 ~ 21:00',
@@ -63,7 +72,7 @@ const FoodKorean = () => {
         path: '/chueotang',
       },
       {
-        id: 7,
+        id: 8,
         title: '담터쭈구미',
         img: jjukkumi,
         time: '영업시간 11:00 ~ 20:45',
@@ -71,7 +80,7 @@ const FoodKorean = () => {
         path: '/jjukkumi',
       },
       {
-        id: 8,
+        id: 9,
         title: '세상만사감자탕',
         img: gamjatang,
         time: '영업시간 08:00 ~ 23:00',
@@ -79,7 +88,7 @@ const FoodKorean = () => {
         path: '/gamjatang',
       },
       {
-        id: 9,
+        id: 10,
         title: '최고집해물찜칼국수',
         img: choegojip,
         time: '영업시간 10:30 ~ 22:00',
