@@ -3,6 +3,7 @@ import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 import BrandHeader from '../../discharge/BrandHeader';
+import PopUp from '../../views/PopUp';
 
 // 리스트 선언
 const SyokuyokuList__ramen = [
@@ -214,6 +215,8 @@ const SyokuyokuList__drink = [
 const Syokuyoku = () => {
   return (
     <section>
+      {/* 3/20 팝업 추가 */}
+      <PopUp />
       <BrandHeader name="쇼쿠요쿠" />
       <main>
         <MenuSection title="라멘" items={SyokuyokuList__ramen} />
