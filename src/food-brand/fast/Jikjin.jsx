@@ -3,7 +3,6 @@ import { MenuBottom, MenuSection } from '../../discharge/MenuCompo';
 import MainFooter from '../../main-components/MainFooter';
 import UpDown from '../UpDown';
 import BrandHeader from '../../discharge/BrandHeader';
-import PopUp from '../../views/PopUp';
 
 // 리스트 선언
 const JikjinList__main = [
@@ -59,8 +58,7 @@ const JikjinList__extra = [
 const Jikjin = () => {
   return (
     <section>
-      {/* 3/4 팝업 추가 */}
-      <PopUp />
+      {/* 4/1 팝업 제거 */}
       <BrandHeader name="직진닭강정" />
       <main>
         <MenuSection title="닭강정" items={JikjinList__main} />
