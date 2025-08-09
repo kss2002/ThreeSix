@@ -8,37 +8,37 @@ const MainListMobile = () => {
     () => [
       {
         path: '/western',
-        img: require('../assets/img/grid/w__port.webp'),
+        img: new URL('../assets/img/grid/w__port.webp', import.meta.url).href,
         text: '양식',
       },
       {
         path: '/chinese',
-        img: require('../assets/img/grid/c__port.webp'),
+        img: new URL('../assets/img/grid/c__port.webp', import.meta.url).href,
         text: '중식',
       },
       {
         path: '/korean',
-        img: require('../assets/img/grid/k__port.webp'),
+        img: new URL('../assets/img/grid/k__port.webp', import.meta.url).href,
         text: '한식',
       },
       {
         path: '/japanese',
-        img: require('../assets/img/grid/j__port.webp'),
+        img: new URL('../assets/img/grid/j__port.webp', import.meta.url).href,
         text: '일식',
       },
       {
         path: '/school',
-        img: require('../assets/img/grid/s__port.webp'),
+        img: new URL('../assets/img/grid/s__port.webp', import.meta.url).href,
         text: '분식',
       },
       {
         path: '/dessert',
-        img: require('../assets/img/grid/d__port.webp'),
+        img: new URL('../assets/img/grid/d__port.webp', import.meta.url).href,
         text: '후식',
       },
       {
         path: '/fast',
-        img: require('../assets/img/grid/f__port.webp'),
+        img: new URL('../assets/img/grid/f__port.webp', import.meta.url).href,
         text: '기타',
       },
     ],

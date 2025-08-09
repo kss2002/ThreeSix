@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainView from './views/MainView';
 
 // 카테고리 - import
-import ChineseView from '../src/views/ListView/ChineseView';
+import ChineseView from './views/ListView/ChineseView';
 import WesternView from './views/ListView/WesternView';
 import KoreanView from './views/ListView/KoreanView';
 import JapaneseView from './views/ListView/JapaneseView';
