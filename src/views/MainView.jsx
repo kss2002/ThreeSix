@@ -43,7 +43,7 @@ const MainView = () => {
       {loading && shouldShowLoader ? (
         <LoadingSpinner loading={loading} />
       ) : (
-        <>
+        <main>
           <MainHeader />
           <Main>
             <MainHello />
@@ -55,7 +55,7 @@ const MainView = () => {
             <MainContact />
           </Main>
           <MainFooter />
-        </>
+        </main>
       )}
     </>
   );
