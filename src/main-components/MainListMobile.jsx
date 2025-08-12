@@ -75,7 +75,7 @@ const MainListMobile = () => {
             <div id="map" className="Mainmap__main">
               <Map
                 center={{ lat: 37.64398229999981, lng: 127.11030229999939 }}
-                style={{ width: '280px', height: '140px' }}
+                style={{ width: '280px', height: '144px' }}
                 level={2}
               />
             </div>
