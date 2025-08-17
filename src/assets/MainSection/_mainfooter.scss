@@ -28,7 +28,7 @@
   .MainFooter-pc {
     background-color: #d3f3c9;
     width: 100vw;
-    height: 200px;
+    height: 230px;
 
     box-shadow: var(--shadow-main);
   }
@@ -46,20 +46,20 @@
   }
 
   .Mainfooter__title {
-    color: #5fd33a;
+    color: black;
     text-align: center;
     font-family: 'threesix-regular';
     font-size: 32px;
     padding-top: 10px;
-
-    &:hover {
-      color: var(--balck-color);
-    }
   }
 
   .Mainfooter__update {
     margin-left: 10px;
     color: var(--subSilver-color);
+
+    &:hover {
+      color: var(--balck-color);
+    }
   }
 }
 

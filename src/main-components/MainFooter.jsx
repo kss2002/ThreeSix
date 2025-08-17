@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { FiGithub } from 'react-icons/fi';
 
 // GitHube API / fetch
 const MainFooter = () => {
@@ -41,9 +42,12 @@ const MainFooter = () => {
             기재된 내용과 다를 수 있으며 자세한 사항은 가게에 문의해주세요!
           </p>
           <p className="Mainfooter__title">삼육대 유니브 1팀</p>
-          <h6 className="Mainfooter__update">
+          <h3 className="Mainfooter__update">
             Copyright &copy; 업데이트: {lastUpdated}
-          </h6>
+            <a href="https://github.com/kss2002/ThreeSix" target="_blank">
+              <FiGithub />
+            </a>
+          </h3>
         </div>
       </footer>
     </>
