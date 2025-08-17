@@ -1,4 +1,3 @@
-import React from 'react';
 import { PacmanLoader } from 'react-spinners';
 
 const LoadingSpinner = ({ loading }) => {
@@ -6,7 +5,7 @@ const LoadingSpinner = ({ loading }) => {
 
   return (
     <div className="loading-overlay">
-      <PacmanLoader color="#88c27c" size={50} />
+      <PacmanLoader color="rgba(136, 194, 124, 0.8)" size={50} />
     </div>
   );
 };
