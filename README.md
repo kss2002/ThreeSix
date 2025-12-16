@@ -5,15 +5,7 @@
 <b>
 <mark>삼육대</mark> 근처 밥집이나 카페의 메뉴 및 가격을 알려주는 프로덕트입니다.</b>
 
-#### [삼식아 사이트 Link](https://samsika.site/)
-
-netlify 사이트
-
 #### https://app.netlify.com/projects/samsika/overview
-
-## Contributing
-
-커뮤니티의 모든 분들의 기여를 환영합니다. 😊
 
 ## License
 
@@ -26,8 +18,6 @@ MIT © Viva Republica, Inc. 자세한 내용은 [[LICENSE]](https://github.com/k
 ## Contributor
 
 - Designer 1명
-
-- BE-Developer 1명
 
 - FE-Developer 1명
 
